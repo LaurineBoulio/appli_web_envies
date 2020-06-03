@@ -1,3 +1,10 @@
+﻿
+<?php
+	require_once("BDD.php");
+	
+?>
+
+
 <!DOCTYPE html>
 <html lang=fr dir="ltr">
 	<head>
@@ -13,16 +20,17 @@
 				<h3>En moins de 12 min</h3>
 				<h3>Aucune question n'est obligatoire cependant essayer de ne pas laisser de reponses neutres</h3>
 				
-				<form>
+				
+				<form method='post' action='#'>
 				
 					<h2>0. Qui êtes-vous ?</h2>			
 					<div class="reponse">
 						<label for="sexeChoix1"><h3>Sexe : </h3></label>
 						<input type="radio" id="SexeChoix1"
-						 name="qSexe" value="f">
+						 name="qSexe" value="F">
 						<label for="sexeChoix1">F</label>
 						<input type="radio" id="SexeChoix2"
-						 name="qSexe" value="g">
+						 name="qSexe" value="G">
 						<label for="sexeChoix2">G</label>
 						 </br>				
 						<label for="age"><h3>Age:</h3></label>
@@ -331,7 +339,7 @@
 							<label for="formulaire9A">Africain</label>
 							 </br>
 							<input type="radio" id="Formulaire9B"
-							 name="choix9" value="alg�rien">
+							 name="choix9" value="alg?en">
 							<label for="formulaire9B">Algérien</label>
 							 </br>
 							<input type="radio" id="Formulaire9C"
@@ -477,9 +485,29 @@
 						</section>
 						
 					</div>
-				
+					
+					
+					<div style="margin-left: 900px;"><input type="submit" name="confirmer" value="Confirmer"></div><br><br>
+					
 				</form>	
 		</div>	
 	</body>
 	
+		
 </html>
+
+<?php
+			if(isset($_POST['confirmer'])){
+				if(!empty($_POST['qAge'])) $age=$_POST['qAge'];
+				else $age='';
+				
+						
+            $sexe=$_POST['qSexe'];
+			$region=$_POST['qRegion'];
+        
+            $bdd = connectDb();
+			$query =$bdd->prepare('INSERT INTO personne  (sexe, age, region) VALUES(?,?,?)');
+			$query->execute(array($sexe,$age,$region));
+			}
+        ?>
+
