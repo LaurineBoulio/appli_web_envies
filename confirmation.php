@@ -9,7 +9,7 @@
 		<title>Vos envies</title>
 	</head>
 	<body>
-		<div="corps">
+		<div class="corps">
 			<h1>Votre participation a bien été prise en compte</h1>
 			<h3>Merci d'avoir répondu à notre questionnaire ! Votre retour va être traité et analysé avce les plus grands soins.<h3>
 		</div>
