@@ -38,59 +38,59 @@
 						<label for="sexeChoix2">G</label>
 						 </br>				
 						<label for="age"><h3>Age: <span class="sanssautdeligne">*</span></h3></label>
-						<input type="number" id="age" name="qAge" min="0" max="100">
+						<input type="text" name="age" id="age" size="3" onblur="verifAge(this)">
 						 </br>
 						<label for="regionChoix"><h3>Région : <span class="sanssautdeligne">*</span></h3></label> </br>
 						<section>
-							<input type="radio" id="Region1"
+							<input type="radio" id="region1"
 							 name="qRegion" value="Auvergne-Rhône-Alpes" checked>
 							<label for="Region1">Auvergne-Rhône-Alpes</label>
 							 </br>
-							 <input type="radio" id="Region2"
+							 <input type="radio" id="region2"
 							 name="qRegion" value="Bourgogne-Franche-Comte">
 							<label for="Region2">Bourgogne-Franche-Comte</label>
 							 </br>
-							<input type="radio" id="Region3"
+							<input type="radio" id="region3"
 							 name="qRegion" value="Bretagne">
 							<label for="Region3">Bretagne</label>
 							 </br>
-							 <input type="radio" id="Region4"
+							 <input type="radio" id="region4"
 							 name="qRegion" value="Centre-Val de Loire">
 							<label for="Region4">Centre-Val de Loire</label>
 							 </br>					
-							<input type="radio" id="Region5"
+							<input type="radio" id="region5"
 							 name="qRegion" value="Corse">
 							<label for="Region5">Corse</label>
 							 </br> 
-							<input type="radio" id="Region6"
+							<input type="radio" id="region6"
 							 name="qRegion" value="Grand Est">
 							<label for="Region6">Grand Est</label>
 							 </br>
-							<input type="radio" id="Region7"
+							<input type="radio" id="region7"
 							 name="qRegion" value="Hauts-de-France">
 							<label for="Region7">Hauts-de-France</label>
 							 </br> 
-							<input type="radio" id="Region8"
+							<input type="radio" id="region8"
 							 name="qRegion" value="Ile-de-France">
 							<label for="Region8">Ile-de-France</label>
 							 </br>
-							<input type="radio" id="Region9"
+							<input type="radio" id="region9"
 							 name="qRegion" value="Normandie">
 							<label for="Region9">Normandie</label>					
 							 </br>				
-							<input type="radio" id="Region10"
+							<input type="radio" id="region10"
 							 name="qRegion" value="Nouvelle-Aquitaine">
 							<label for="Region10">Nouvelle-Aquitaine</label>		
 							 </br>
-							<input type="radio" id="Region11"
+							<input type="radio" id="region11"
 							 name="qRegion" value="Occitanie">
 							<label for="Region11">Occitanie</label>
 							 </br>						 
-							<input type="radio" id="Region12"
+							<input type="radio" id="region12"
 							 name="qRegion" value="Pays de la Loire">
 							<label for="Region12">Pays de la Loire</label>			
 							 </br>
-							<input type="radio" id="Region13"
+							<input type="radio" id="region13"
 							 name="qRegion" value="Provence-Alpes-Cote d'Azur">
 							<label for="Region13">Provence-Alpes-Côte d'Azur</label>
 							 </br>
@@ -100,23 +100,23 @@
 					<h2>1. Pour vous, des vacances de rêve riment avec : </h2>
 					<div class="reponse">
 						<input type="radio" id="Formulaire0a"
-						 name="choix1" value="nul" checked onclick="griser()">
+						 name="choix1" value="nul" checked onclick="griser(this)">
 						<label for="formulaire1a">Pas de réponse</label>
 						 </br>
 						<input type="radio" id="Formulaire1A"
-						 name="choix1" value="campagne" onclick="griser()">
+						 name="choix1" value="campagne" onclick="griser(this)">
 						<label for="formulaire1A">Campagne</label>
 						 </br>
 						<input type="radio" id="Formulaire1B"
-						 name="choix1" value="plage" onclick="griser()">
+						 name="choix1" value="plage" onclick="griser(this)">
 						<label for="formulaire1B">Plage</label>
 						 </br>
 						<input type="radio" id="Formulaire1C"
-						 name="choix1" value="ski" onclick="griser()">
+						 name="choix1" value="ski" onclick="griser(this)">
 						<label for="formulaire1C">Ski</label>
 						 </br>	
 						<input type="radio" id="Formulaire1D"
-						name="choix1" value="autre" onclick="nonGriser()">
+						name="choix1" value="autre1" onclick="nonGriser(this)">
 						<label for="formulaire1D">Autre</label>
 						<input type="text" id="commentaire1" name="commentaire1"  maxlength="30" size="30" disabled >	
 						</br>
@@ -125,27 +125,27 @@
 					<h2>2. Quand vous sortez entre amis, vous préférez aller : </h2>
 					<div class="reponse">
 						<input type="radio" id="Formulaire2a"
-						 name="choix2" value="nul" checked onclick="griser()">
+						 name="choix2" value="nul" checked onclick="griser(this)">
 						<label for="formulaire2a">Pas de réponse</label>
 						 </br>
 						<input type="radio" id="Formulaire2A"
-						 name="choix2" value="bar" onclick="griser()">
+						 name="choix2" value="bar" onclick="griser(this)">
 						<label for="formulaire2A">Bar</label>
 						 </br>
 						<input type="radio" id="Formulaire2B"
-						 name="choix2" value="cinema" onclick="griser()">
+						 name="choix2" value="cinema" onclick="griser(this)">
 						<label for="formulaire2B">Cinéma</label>
 						 </br>
 						<input type="radio" id="Formulaire2C"
-						 name="choix2" value="concert" onclick="griser()">
+						 name="choix2" value="concert" onclick="griser(this)">
 						<label for="formulaire2C">Concert</label>
 						 </br>	
 						<input type="radio" id="Formulaire2D"
-						 name="choix2" value="magasin" onclick="griser()">
+						 name="choix2" value="magasin" onclick="griser(this)">
 						<label for="formulaire2D">Magasin</label>
 						 </br>	
 						<input type="radio" id="Formulaire2E"
-						name="choix2" value="autre" onclick="nonGriser()">
+						name="choix2" value="autre2" onclick="nonGriser(this)">
 						<label for="formulaire2E">Autre</label>
 						<input type="text" id="commentaire2" name="commentaire2"  maxlength="30" size="30" disabled >	
 						</br>						 
@@ -154,27 +154,27 @@
 					<h2>3. Le soir vous aimez : </h2>
 					<div class="reponse">
 						<input type="radio" id="Formulaire3a"
-						 name="choix3" value="nul" checked onclick="griser()">
+						 name="choix3" value="nul" checked onclick="griser(this)">
 						<label for="formulaire3a">Pas de réponse</label>
 						 </br>
 						<input type="radio" id="Formulaire3A"
-						 name="choix3" value="jeu" onclick="griser()">
+						 name="choix3" value="jeu" onclick="griser(this)">
 						<label for="formulaire3A">Jouer à votre jeu préféré</label>
 						 </br>
 						<input type="radio" id="Formulaire3B"
-						 name="choix3" value="lire" onclick="griser()">
+						 name="choix3" value="lire" onclick="griser(this)">
 						<label for="formulaire3B">Lire</label>
 						 </br>
 						<input type="radio" id="Formulaire3C"
-						 name="choix3" value="tele" onclick="griser()">
+						 name="choix3" value="tele" onclick="griser(this)">
 						<label for="formulaire3C">Regarder la télé</label>
 						 </br>	
 						<input type="radio" id="Formulaire3D"
-						 name="choix3" value="portable" onclick="griser()">
+						 name="choix3" value="portable" onclick="griser(this)">
 						<label for="formulaire3D">Rester sur votre portable</label>
 						 </br>
 						<input type="radio" id="Formulaire3E"
-						name="choix3" value="autre" onclick="nonGriser()">
+						name="choix3" value="autre3" onclick="nonGriser(this)">
 						<label for="formulaire3E">Autre</label>
 						<input type="text" id="commentaire3" name="commentaire3"  maxlength="30" size="30" disabled >	
 						</br>
@@ -183,35 +183,35 @@
 					<h2>4. Quand vous prenez un verre en terrasse, c'est plutôt : </h2>
 					<div class="reponse">
 						<input type="radio" id="Formulaire4a"
-						 name="choix4" value="nul" checked onclick="griser()">
+						 name="choix4" value="nul" checked onclick="griser(this)">
 						<label for="formulaire4a">Pas de réponse</label>
 						 </br>
 						<input type="radio" id="Formulaire4A"
-						 name="choix4" value="eau" onclick="griser()">
+						 name="choix4" value="eau" onclick="griser(this)">
 						<label for="formulaire4A">De l'eau</label>
 						 </br>
 						<input type="radio" id="Formulaire4B"
-						 name="choix4" value="vin" onclick="griser()">
+						 name="choix4" value="vin" onclick="griser(this)">
 						<label for="formulaire4B">Du vin</label>
 						 </br>
 						<input type="radio" id="Formulaire4C"
-						 name="choix4" value="cafe" onclick="griser()">
+						 name="choix4" value="cafe" onclick="griser(this)">
 						<label for="formulaire4C">Un café</label>
 						 </br>	
 						<input type="radio" id="Formulaire4D"
-						 name="choix4" value="jusFruit" onclick="griser()">
+						 name="choix4" value="jusFruit" onclick="griser(this)">
 						<label for="formulaire4D">Un jus de fruit</label>
 						 </br>
 						<input type="radio" id="Formulaire4E"
-						 name="choix4" value="soda" onclick="griser()">
+						 name="choix4" value="soda" onclick="griser(this)">
 						<label for="formulaire4E">Un soda</label>
 						 </br>		
 						<input type="radio" id="Formulaire4F"
-						 name="choix4" value="biere" onclick="griser()">
+						 name="choix4" value="biere" onclick="griser(this)">
 						<label for="formulaire4F">Une bière</label>
 						 </br>
 						<input type="radio" id="Formulaire4G"
-						name="choix4" value="autre" onclick="nonGriser()">
+						name="choix4" value="autre4" onclick="nonGriser(this)">
 						<label for="formulaire4G">Autre</label>
 						<input type="text" id="commentaire4" name="commentaire4"  maxlength="30" size="30" disabled >	
 						</br>						 
@@ -220,23 +220,23 @@
 					<h2>5. Quelle serait l'habitation idéale ? </h2>
 					<div class="reponse">
 						<input type="radio" id="Formulaire5a"
-						 name="choix5" value="nul" checked onclick="griser()">
+						 name="choix5" value="nul" checked onclick="griser(this)">
 						<label for="formulaire5a">Pas de réponse</label>
 						 </br>
 						<input type="radio" id="Formulaire5A"
-						 name="choix5" value="appartVille" onclick="griser()">
+						 name="choix5" value="appartVille" onclick="griser(this)">
 						<label for="formulaire5A">Un appartement en ville</label>
 						 </br>
 						<input type="radio" id="Formulaire5B"
-						 name="choix5" value="cabaneForet" onclick="griser()">
+						 name="choix5" value="cabaneForet" onclick="griser(this)">
 						<label for="formulaire5B">Une cabane perdue dans la forêt</label>
 						 </br>
 						<input type="radio" id="Formulaire5C"
-						 name="choix5" value="maisonCampagne" onclick="griser()">
+						 name="choix5" value="maisonCampagne" onclick="griser(this)">
 						<label for="formulaire5C">Une maison de campagne</label>
 						 </br>	
 						<input type="radio" id="Formulaire5D"
-						name="choix5" value="autre" onclick="nonGriser()">
+						name="choix5" value="autre5" onclick="nonGriser(this)">
 						<label for="formulaire5D">Autre</label>
 						<input type="text" id="commentaire5" name="commentaire5"  maxlength="30" size="30" disabled >	
 						</br>						 
@@ -246,47 +246,47 @@
 					<div class="reponse">
 						<section>
 							<input type="radio" id="Formulaire6a"
-							 name="choix6" value="nul" checked onclick="griser()">
+							 name="choix6" value="nul" checked onclick="griser(this)">
 							<label for="formulaire6a">Pas de réponse</label>
 							 </br>
 							<input type="radio" id="Formulaire6A"
-							 name="choix6" value="aucun" onclick="griser()">
+							 name="choix6" value="aucun" onclick="griser(this)">
 							<label for="formulaire6A">Aucun</label>
 							 </br>
 							<input type="radio" id="Formulaire6B"
-							 name="choix6" value="chat" onclick="griser()">
+							 name="choix6" value="chat" onclick="griser(this)">
 							<label for="formulaire6B">Un chat</label>
 							 </br>
 							<input type="radio" id="Formulaire6C"
-							 name="choix6" value="chien" onclick="griser()">
+							 name="choix6" value="chien" onclick="griser(this)">
 							<label for="formulaire6C">Un chien</label>
 							 </br>			
 							<input type="radio" id="Formulaire6D"
-							 name="choix6" value="hamster" onclick="griser()">
+							 name="choix6" value="hamster" onclick="griser(this)">
 							<label for="formulaire6D">Un hamster</label>
 							 </br>
 							<input type="radio" id="Formulaire6E"
-							 name="choix6" value="lapin" onclick="griser()">
+							 name="choix6" value="lapin" onclick="griser(this)">
 							<label for="formulaire6E">Un lapin</label>
 							 </br>		
 							<input type="radio" id="Formulaire6F"
-							 name="choix6" value="poisson" onclick="griser()">
+							 name="choix6" value="poisson" onclick="griser(this)">
 							<label for="formulaire6F">Un poisson</label>
 							 </br>			
 							<input type="radio" id="Formulaire6G"
-							 name="choix6" value="rat" onclick="griser()">
+							 name="choix6" value="rat" onclick="griser(this)">
 							<label for="formulaire6G">Un rat</label>
 							 </br>
 							<input type="radio" id="Formulaire6H"
-							 name="choix6" value="serpent" onclick="griser()">
+							 name="choix6" value="serpent" onclick="griser(this)">
 							<label for="formulaire6H">Un serpent</label>
 							 </br>		
 							<input type="radio" id="Formulaire6I"
-							 name="choix6" value="tortue" onclick="griser()">
+							 name="choix6" value="tortue" onclick="griser(this)">
 							<label for="formulaire6I">Une tortue</label>
 							 </br>
 							<input type="radio" id="Formulaire6J"
-							name="choix6" value="autre" onclick="nonGriser()">
+							name="choix6" value="autre6" onclick="nonGriser(this)">
 							<label for="formulaire6J">Autre</label>
 							<input type="text" id="commentaire6" name="commentaire6"  maxlength="30" size="30" disabled >	
 							 </br>							 
@@ -297,47 +297,43 @@
 					<div class="reponse">
 						<section>
 							<input type="radio" id="Formulaire7a"
-							 name="choix7" value="nul" checked onclick="griser()">
+							 name="choix7" value="nul" checked onclick="griser(this)">
 							<label for="formulaire7a">Pas de réponse</label>
 							 </br>
 							<input type="radio" id="Formulaire7A"
-							 name="choix7" value="animation" onclick="griser()">
+							 name="choix7" value="animation" onclick="griser(this)">
 							<label for="formulaire7A">Animation</label>
 							 </br>
 							<input type="radio" id="Formulaire7B"
-							 name="choix7" value="comedie" onclick="griser()">
+							 name="choix7" value="comedie" onclick="griser(this)">
 							<label for="formulaire7B">Comédie</label>
 							 </br>
 							<input type="radio" id="Formulaire7C"
-							 name="choix7" value="documentaire" onclick="griser()">
+							 name="choix7" value="documentaire" onclick="griser(this)">
 							<label for="formulaire7C">Documentaire</label>
 							 </br>			
 							<input type="radio" id="Formulaire7D"
-							 name="choix7" value="drame" onclick="griser()">
+							 name="choix7" value="drame" onclick="griser(this)">
 							<label for="formulaire7D">Drame</label>
 							 </br>
 							<input type="radio" id="Formulaire7E"
-							 name="choix7" value="fantastique" onclick="griser()">
+							 name="choix7" value="fantastique" onclick="griser(this)">
 							<label for="formulaire7E">Fantastique</label>
 							 </br>		
 							<input type="radio" id="Formulaire7F"
-							 name="choix7" value="horreur" onclick="griser()">
+							 name="choix7" value="horreur" onclick="griser(this)">
 							<label for="formulaire7F">Horreur</label>
 							 </br>			
 							<input type="radio" id="Formulaire7G"
-							 name="choix7" value="thriller" onclick="griser()">
+							 name="choix7" value="thriller" onclick="griser(this)">
 							<label for="formulaire7G">Thriller</label>
 							 </br>
 							<input type="radio" id="Formulaire7H"
-							 name="choix7" value="science-fiction" onclick="griser()">
+							 name="choix7" value="science-fiction" onclick="griser(this)">
 							<label for="formulaire7H">Science-fiction</label>
 							 </br>		
 							<input type="radio" id="Formulaire7J"
-							 name="choix7" value="autre" onclick="griser()">
-							<label for="formulaire7J">Autre</label>
-							 </br>	
-							<input type="radio" id="Formulaire7K"
-							name="choix7" value="autre" onclick="nonGriser()">
+							name="choix7" value="autre7" onclick="nonGriser(this)">
 							<label for="formulaire7K">Autre</label>
 							<input type="text" id="commentaire7" name="commentaire7"  maxlength="30" size="30" disabled >	
 							 </br>
@@ -348,51 +344,51 @@
 					<div class="reponse">
 						<section>
 							<input type="radio" id="Formulaire8a"
-							 name="choix8" value="nul" checked onclick="griser()">
+							 name="choix8" value="nul" checked onclick="griser(this)">
 							<label for="formulaire8a">Pas de réponse</label>
 							 </br>
 							<input type="radio" id="Formulaire8A"
-							 name="choix8" value="blues" onclick="griser()">
+							 name="choix8" value="blues" onclick="griser(this)">
 							<label for="formulaire8A">Blues</label>
 							 </br>
 							<input type="radio" id="Formulaire8B"
-							 name="choix8" value="classique" onclick="griser()">
+							 name="choix8" value="classique" onclick="griser(this)">
 							<label for="formulaire8B">Classique</label>
 							 </br>
 							<input type="radio" id="Formulaire8C"
-							 name="choix8" value="dubstep" onclick="griser()">
+							 name="choix8" value="dubstep" onclick="griser(this)">
 							<label for="formulaire8C">Dubstep</label>
 							 </br>			
 							<input type="radio" id="Formulaire8D"
-							 name="choix8" value="electro" onclick="griser()">
+							 name="choix8" value="electro" onclick="griser(this)">
 							<label for="formulaire8D">Electro</label>
 							 </br>
 							<input type="radio" id="Formulaire8E"
-							 name="choix8" value="jazz" onclick="griser()">
+							 name="choix8" value="jazz" onclick="griser(this)">
 							<label for="formulaire8E">Jazz</label>
 							 </br>		
 							<input type="radio" id="Formulaire8F"
-							 name="choix8" value="metal" onclick="griser()">
+							 name="choix8" value="metal" onclick="griser(this)">
 							<label for="formulaire8F">Métal</label>
 							 </br>			
 							<input type="radio" id="Formulaire8G"
-							 name="choix8" value="rap" onclick="griser()">
+							 name="choix8" value="rap" onclick="griser(this)">
 							<label for="formulaire8G">Rap</label>
 							 </br>
 							<input type="radio" id="Formulaire8H"
-							 name="choix8" value="reggae" onclick="griser()">
+							 name="choix8" value="reggae" onclick="griser(this)">
 							<label for="formulaire8H">Reggae</label>
 							 </br>		
 							<input type="radio" id="Formulaire8I"
-							 name="choix8" value="rnb" onclick="griser()">
+							 name="choix8" value="rnb" onclick="griser(this)">
 							<label for="formulaire8I">RnB</label>
 							 </br>	
 							<input type="radio" id="Formulaire8J"
-							 name="choix8" value="rock" onclick="griser()">
+							 name="choix8" value="rock" onclick="griser(this)">
 							<label for="formulaire8J">Rock</label>
 							 </br>
 							<input type="radio" id="Formulaire8K"
-							name="choix8" value="autre" onclick="nonGriser()">
+							name="choix8" value="autre8" onclick="nonGriser(this)">
 							<label for="formulaire8K">Autre</label>
 							<input type="text" id="commentaire8" name="commentaire8"  maxlength="30" size="30" disabled >	
 							 </br>						 
@@ -403,51 +399,51 @@
 					<div class="reponse">
 						<section>
 							<input type="radio" id="Formulaire9a"
-							 name="choix9" value="nul" checked onclick="griser()">
+							 name="choix9" value="nul" checked onclick="griser(this)">
 							<label for="formulaire9a">Pas de réponse</label>
 							 </br>
 							<input type="radio" id="Formulaire9A"
-							 name="choix9" value="africain" onclick="griser()">
+							 name="choix9" value="africain" onclick="griser(this)">
 							<label for="formulaire9A">Africain</label>
 							 </br>
 							<input type="radio" id="Formulaire9B"
-							 name="choix9" value="algérien" onclick="griser()">
+							 name="choix9" value="algérien" onclick="griser(this)">
 							<label for="formulaire9B">Algérien</label>
 							 </br>
 							<input type="radio" id="Formulaire9C"
-							 name="choix9" value="chinois" onclick="griser()">
+							 name="choix9" value="chinois" onclick="griser(this)">
 							<label for="formulaire9C">Chinois</label>
 							 </br>			
 							<input type="radio" id="Formulaire9D"
-							 name="choix9" value="fastfood" onclick="griser()">
+							 name="choix9" value="fastfood" onclick="griser(this)">
 							<label for="formulaire9D">Fastfood</label>
 							 </br>
 							<input type="radio" id="Formulaire9E"
-							 name="choix9" value="gastronomique" onclick="griser()">
+							 name="choix9" value="gastronomique" onclick="griser(this)">
 							<label for="formulaire9E">Gastronomique</label>
 							 </br>		
 							<input type="radio" id="Formulaire9F"
-							 name="choix9" value="indien" onclick="griser()">
+							 name="choix9" value="indien" onclick="griser(this)">
 							<label for="formulaire9F">Indien</label>
 							 </br>			
 							<input type="radio" id="Formulaire9G"
-							 name="choix9" value="italien" onclick="griser()">
+							 name="choix9" value="italien" onclick="griser(this)">
 							<label for="formulaire9G">Italien </label>
 							 </br>
 							<input type="radio" id="Formulaire9H"
-							 name="choix9" value="japonais" onclick="griser()">
+							 name="choix9" value="japonais" onclick="griser(this)">
 							<label for="formulaire9H">Japonais</label>
 							 </br>		
 							<input type="radio" id="Formulaire9I"
-							 name="choix9" value="marocain" onclick="griser()">
+							 name="choix9" value="marocain" onclick="griser(this)">
 							<label for="formulaire9I">Marocain</label>
 							 </br>	
 							<input type="radio" id="Formulaire9J"
-							 name="choix9" value="mexicain" onclick="griser()">
+							 name="choix9" value="mexicain" onclick="griser(this)">
 							<label for="formulaire9J">Mexicain</label>
 							 </br>
 							<input type="radio" id="Formulaire9K"
-							name="choix9" value="autre" onclick="nonGriser()">
+							name="choix9" value="autre9" onclick="nonGriser(this)">
 							<label for="formulaire9K">Autre</label>
 							<input type="text" id="commentaire9" name="commentaire9"  maxlength="30" size="30" disabled >	
 							 </br>							 
@@ -459,23 +455,23 @@
 					<div class="reponse">
 						<section>
 							<input type="radio" id="Formulaire10a"
-							 name="choix10" value="nul" checked onclick="griser()">
+							 name="choix10" value="nul" checked onclick="griser(this)">
 							<label for="formulaire10a">Pas de réponse</label>
 							 </br>
 							<input type="radio" id="Formulaire10A"
-							 name="choix10" value="basket-ball" onclick="griser()">
+							 name="choix10" value="basket-ball" onclick="griser(this)">
 							<label for="formulaire10A">Basket-ball</label>
 							 </br>
 							<input type="radio" id="Formulaire10B"
-							 name="choix10" value="canoe-kayak" onclick="griser()">
+							 name="choix10" value="canoe-kayak" onclick="griser(this)">
 							<label for="formulaire10B">Canoe-Kayak</label>
 							 </br>
 							<input type="radio" id="Formulaire10C"
-							 name="choix10" value="equitation" onclick="griser()">
+							 name="choix10" value="equitation" onclick="griser(this)">
 							<label for="formulaire10C">Equitation</label>
 							 </br>			
 							<input type="radio" id="Formulaire10D"
-							 name="choix10" value="football" onclick="griser()">
+							 name="choix10" value="football" onclick="griser(this)">
 							<label for="formulaire10D">Football</label>
 							 </br>
 							<input type="radio" id="Formulaire10E"
@@ -483,27 +479,27 @@
 							<label for="formulaire10E">Golf</label>
 							 </br>		
 							<input type="radio" id="Formulaire10F"
-							 name="choix10" value="handball" onclick="griser()">
+							 name="choix10" value="handball" onclick="griser(this)">
 							<label for="formulaire10F">Handball</label>
 							 </br>			
 							<input type="radio" id="Formulaire10G"
-							 name="choix10" value="judo" onclick="griser()">
+							 name="choix10" value="judo" onclick="griser(this)">
 							<label for="formulaire10G">Judo</label>
 							 </br>
 							<input type="radio" id="Formulaire10H"
-							 name="choix10" value="rugby" onclick="griser()">
+							 name="choix10" value="rugby" onclick="griser(this)">
 							<label for="formulaire10H">Rugby</label>
 							 </br>		
 							<input type="radio" id="Formulaire10I"
-							 name="choix10" value="sports sous-marins" onclick="griser()">
+							 name="choix10" value="sports sous-marins" onclick="griser(this)">
 							<label for="formulaire10I">Sports sous-marins</label>
 							 </br>	
 							<input type="radio" id="Formulaire10J"
-							 name="choix10" value="tennis" onclick="griser()">
+							 name="choix10" value="tennis" onclick="griser(this)">
 							<label for="formulaire10J">Tennis</label>
 							 </br>
 							<input type="radio" id="Formulaire10K"
-							name="choix10" value="autre" onclick="nonGriser()">
+							name="choix10" value="autre10" onclick="nonGriser(this)">
 							<label for="formulaire10K">Autre</label>
 							<input type="text" id="commentaire10" name="commentaire10"  maxlength="30" size="30" disabled >	
 							 </br>						 
@@ -515,51 +511,51 @@
 					<div class="reponse">
 						<section>
 							<input type="radio" id="Formulaire11a"
-							 name="choix11" value="nul" checked onclick="griser()">
+							 name="choix11" value="nul" checked onclick="griser(this)">
 							<label for="formulaire11a">Pas de réponse</label>
 							 </br>
 							<input type="radio" id="Formulaire11A"
-							 name="choix11" value="allemagne" onclick="griser()">
+							 name="choix11" value="allemagne" onclick="griser(this)">
 							<label for="formulaire11A">Allemagne</label>
 							 </br>
 							<input type="radio" id="Formulaire11B"
-							 name="choix11" value="chine" onclick="griser()">
+							 name="choix11" value="chine" onclick="griser(this)">
 							<label for="formulaire11B">Chine</label>
 							 </br>
 							<input type="radio" id="Formulaire11C"
-							 name="choix11" value="espagne" onclick="griser()">
+							 name="choix11" value="espagne" onclick="griser(this)">
 							<label for="formulaire11C">Espagne</label>
 							 </br>			
 							<input type="radio" id="Formulaire11D"
-							 name="choix11" value="etats-Unis" onclick="griser()">
+							 name="choix11" value="etats-Unis" onclick="griser(this)">
 							<label for="formulaire11D">Etats-Unis</label>
 							 </br>
 							<input type="radio" id="Formulaire11E"
-							 name="choix11" value="france" onclick="griser()">
+							 name="choix11" value="france" onclick="griser(this)">
 							<label for="formulaire11E">France</label>
 							 </br>		
 							<input type="radio" id="Formulaire11F"
-							 name="choix11" value="italie" onclick="griser()">
+							 name="choix11" value="italie" onclick="griser(this)">
 							<label for="formulaire11F">Italie</label>
 							 </br>			
 							<input type="radio" id="Formulaire11G"
-							 name="choix11" value="royaume-uni" onclick="griser()">
+							 name="choix11" value="royaume-uni" onclick="griser(this)">
 							<label for="formulaire11G">Royaume-Uni</label>
 							 </br>
 							<input type="radio" id="Formulaire11H"
-							 name="choix11" value="russie" onclick="griser()">
+							 name="choix11" value="russie" onclick="griser(this)">
 							<label for="formulaire11H">Russie</label>
 							 </br>		
 							<input type="radio" id="Formulaire11I"
-							 name="choix11" value="thailande" onclick="griser()">
+							 name="choix11" value="thailande" onclick="griser(this)">
 							<label for="formulaire11I">Thailande</label>
 							 </br>	
 							<input type="radio" id="Formulaire11J"
-							 name="choix11" value="turquie" onclick="griser()">
+							 name="choix11" value="turquie" onclick="griser(this)">
 							<label for="formulaire11J">Turquie</label>
 							 </br>
 							<input type="radio" id="Formulaire11K"
-							 name="choix11" value="autre" onclick="nonGriser()">
+							 name="choix11" value="autre11" onclick="nonGriser(this)">
 							<label for="formulaire11K">Autre</label>
 							<input type="text" id="commentaire11" name="commentaire11"  maxlength="30" size="30" disabled >		
 						
@@ -574,13 +570,14 @@
 					  
 					  
 					  
-					<div style="margin-left: 870px;"><input type="submit" name="confirmer" value="Confirmer"></div><br><br>
+					<div style="margin-left: 870px;"><input type="submit" name="confirmer" id="confirmer" value="Confirmer" disabled></div><br><br>
 					
 				</form>	
 		</div>	
 	</body>
 	<script language="javascript" type="text/javascript">
-		function nonGriser() {
+		function nonGriser(champ) {
+			
 			var com1 = document.getElementById('commentaire1');
 			var com2 = document.getElementById('commentaire2');
 			var com3 = document.getElementById('commentaire3');
@@ -592,20 +589,21 @@
 			var com9 = document.getElementById('commentaire9');
 			var com10 = document.getElementById('commentaire10');
 			var com11 = document.getElementById('commentaire11');
-			com1.disabled = false;
-			com2.disabled = false;
-			com3.disabled = false;
-			com4.disabled = false;
-			com5.disabled = false;
-			com6.disabled = false;
-			com7.disabled = false;
-			com8.disabled = false;
-			com9.disabled = false;
-			com10.disabled = false;
-			com11.disabled = false;
+			
+			if(champ.value == 'autre1') com1.disabled = false;
+			if(champ.value == 'autre2') com2.disabled = false;
+			if(champ.value == 'autre3') com3.disabled = false;
+			if(champ.value == 'autre4') com4.disabled = false;
+			if(champ.value == 'autre5') com5.disabled = false;
+			if(champ.value == 'autre6') com6.disabled = false;
+			if(champ.value == 'autre7') com7.disabled = false;
+			if(champ.value == 'autre8') com8.disabled = false;
+			if(champ.value == 'autre9') com9.disabled = false;
+			if(champ.value == 'autre10') com10.disabled = false;
+			if(champ.value == 'autre11') com11.disabled = false;
 		}
 		
-		function griser() {
+		function griser(champ) {
 			var com1 = document.getElementById('commentaire1');
 			var com2 = document.getElementById('commentaire2');
 			var com3 = document.getElementById('commentaire3');
@@ -617,111 +615,113 @@
 			var com9 = document.getElementById('commentaire9');
 			var com10 = document.getElementById('commentaire10');
 			var com11 = document.getElementById('commentaire11');
-			com1.disabled = true;
-			com2.disabled = true;
-			com3.disabled = true;
-			com4.disabled = true;
-			com5.disabled = true;
-			com6.disabled = true;
-			com7.disabled = true;
-			com8.disabled = true;
-			com9.disabled = true;
-			com10.disabled = true;
-			com11.disabled = true;
+			if(champ.name == 'choix1'){
+				com1.value='';
+				com1.disabled = true;
+			} 
+			if(champ.name == 'choix2'){
+				com2.value='';
+				com2.disabled = true;
+			} 
+			if(champ.name == 'choix3'){
+				com3.value='';
+				com3.disabled = true;
+			} 
+			if(champ.name == 'choix4'){
+				com4.value='';
+				com4.disabled = true;
+			} 
+			if(champ.name == 'choix5'){
+				com5.value='';
+				com5.disabled = true;
+			} 
+			if(champ.name == 'choix6'){
+				com6.value='';
+				com6.disabled = true;
+			} 
+			if(champ.name == 'choix7'){
+				com7.value='';
+				com7.disabled = true;
+			} 
+			if(champ.name == 'choix8'){
+				com8.value='';
+				com8.disabled = true;
+			} 
+			if(champ.name == 'choix9'){
+				com9.value='';
+				com9.disabled = true;
+			} 
+			if(champ.name == 'choix10'){
+				com10.value='';
+				com10.disabled = true;
+			} 
+			if(champ.name == 'choix11'){
+				com11.value='';
+				com11.disabled = true;
+			} 
 		}
+		
+	function verifAge(champ){
+		var bouton = document.getElementById('confirmer');
+		var age = parseInt(champ.value);
+		if(isNaN(age) || age < 100 && age > 0){
+		 bouton.disabled=false;
+		}
+	}
+		
+	
 	</script>
 </html>
 
 <?php
 			if(isset($_POST['confirmer'])){
 				
-				$id = 0;
 				$sexe=$_POST['qSexe'];
-				$age=$_POST['qAge'];	
+				$age=$_POST['age'];	
 				$region=$_POST['qRegion'];
-			
+				
+				$reponse1=$_POST['choix1'];
+				$reponse2=$_POST['choix2'];
+				$reponse3=$_POST['choix3'];
+				$reponse4=$_POST['choix4'];
+				$reponse5=$_POST['choix5'];
+				$reponse6=$_POST['choix6'];	
+				$reponse7=$_POST['choix7'];
+				$reponse8=$_POST['choix8'];
+				$reponse9=$_POST['choix9'];	
+				$reponse10=$_POST['choix10'];
+				$reponse11=$_POST['choix11'];
+				
+				//si commentaire== vide
+				if(!empty($_POST['commentaire1'])) $com1=$_POST['commentaire1'];
+				else $com1='';
+				if(!empty($_POST['commentaire2'])) $com2=$_POST['commentaire2'];
+				else $com2='';
+				if(!empty($_POST['commentaire3'])) $com3=$_POST['commentaire3'];
+				else $com3='';
+				if(!empty($_POST['commentaire4'])) $com4=$_POST['commentaire4'];
+				else $com4='';
+				if(!empty($_POST['commentaire5'])) $com5=$_POST['commentaire5'];
+				else $com5='';
+				if(!empty($_POST['commentaire6'])) $com6=$_POST['commentaire6'];
+				else $com6='';
+				if(!empty($_POST['commentaire7'])) $com7=$_POST['commentaire7'];
+				else $com7='';
+				if(!empty($_POST['commentaire8'])) $com8=$_POST['commentaire8'];
+				else $com8='';
+				if(!empty($_POST['commentaire9'])) $com9=$_POST['commentaire9'];
+				else $com9='';
+				if(!empty($_POST['commentaire10'])) $com10=$_POST['commentaire10'];
+				else $com10='';
+				if(!empty($_POST['commentaire11'])) $com11=$_POST['commentaire11'];
+				else $com11='';
+				
 				$bdd = connectDb();
-				$query =$bdd->prepare('INSERT INTO personne  (id, sexe, age, region) VALUES(?,?,?,?)');
-				$query->execute(array($id,$sexe,$age,$region));
-				
-				
-				// $reponse1=$_POST['choix1'];
-				// $commentaire='';
-				// $num=1;
-				
-				// $bdd = connectDb();
-				// $query =$bdd->prepare('INSERT INTO question  (num, reponse, commentaire, id) VALUES(?,?,?,?)');
-				// $query->execute(array($num,$reponse1,$commentaire, $id));
-				
-				// $reponse2=$_POST['choix2'];
-				// $commentaire='';
-				// $num++;
-				// $bdd = connectDb();
-				// $query =$bdd->prepare('INSERT INTO question  (num, reponse, commentaire, id) VALUES(?,?,?,?)');
-				// $query->execute(array($num,$reponse2,$commentaire, $id));
-				
-				// $reponse3=$_POST['choix3'];
-				// $commentaire='';
-				// $num++;
-				// $bdd = connectDb();
-				// $query =$bdd->prepare('INSERT INTO question  (num, reponse, commentaire, id) VALUES(?,?,?,,)');
-				// $query->execute(array($num,$reponse3,$commentaire, $id));
-				
-				// $reponse4=$_POST['choix4'];
-				// $commentaire='';
-				// $num++;
-				// $bdd = connectDb();
-				// $query =$bdd->prepare('INSERT INTO question  (num, reponse, commentaire) VALUES(?,?,?)');
-				// $query->execute(array($num,$reponse4,$commentaire));
-				
-				// $reponse5=$_POST['choix5'];
-				// $commentaire='';
-				// $num++;
-				// $bdd = connectDb();
-				// $query =$bdd->prepare('INSERT INTO question  (num, reponse, commentaire) VALUES(?,?,?)');
-				// $query->execute(array($num,$reponse5,$commentaire));
-				
-				// $reponse6=$_POST['choix6'];	
-				// $commentaire='';
-				// $num++;
-				// $bdd = connectDb();
-				// $query =$bdd->prepare('INSERT INTO question  (num, reponse, commentaire) VALUES(?,?,?)');
-				// $query->execute(array($num,$reponse6,$commentaire));
-				
-				// $reponse7=$_POST['choix7'];
-				// $commentaire='';
-				// $num++;
-				// $bdd = connectDb();
-				// $query =$bdd->prepare('INSERT INTO question  (num, reponse, commentaire) VALUES(?,?,?)');
-				// $query->execute(array($num,$reponse7,$commentaire));
-				
-				// $reponse8=$_POST['choix8'];
-				// $commentaire='';
-				// $num++;
-				// $bdd = connectDb();
-				// $query =$bdd->prepare('INSERT INTO question  (num, reponse, commentaire) VALUES(?,?,?)');
-				// $query->execute(array($num,$reponse8,$commentaire));
-				
-				// $reponse9=$_POST['choix9'];	
-				// $commentaire='';
-				// $num++;
-				// $bdd = connectDb();
-				// $query =$bdd->prepare('INSERT INTO question  (num, reponse, commentaire) VALUES(?,?,?)');
-				// $query->execute(array($num,$reponse9,$commentaire));
-				
-				// $reponse10=$_POST['choix10'];
-				// $commentaire='';
-				// $num++;
-				// $bdd = connectDb();
-				// $query =$bdd->prepare('INSERT INTO question  (num, reponse, commentaire) VALUES(?,?,?)');
-				// $query->execute(array($num,$reponse10,$commentaire));
-				
-				// $reponse11=$_POST['choix11'];
-				// $commentaire='';
-				// $num++;
-				// $bdd = connectDb();
-				// $query =$bdd->prepare('INSERT INTO question  (num, reponse, commentaire) VALUES(?,?,?)');
-				// $query->execute(array($num,$reponse11,$commentaire));
+				$query =$bdd->prepare('INSERT INTO personne  (sexe, age, region, question1, com1, question2, com2, question3, com3, question4, com4, question5, com5, 
+				question6, com6, question7, com7, question8, com8, question9, com9, question10, com10, question11, com11) 
+				VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
+				$query->execute(array($sexe,$age,$region,$reponse1,$com1,$reponse2,$com2,$reponse3,$com3,$reponse4,$com4,$reponse5,$com5,$reponse6,$com6,$reponse7,$com7,$reponse8,$com8,$reponse9,$com9,$reponse10,$com10,$reponse11,$com11));
+								
 			}
 			
 			
