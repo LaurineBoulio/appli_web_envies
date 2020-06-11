@@ -1,8 +1,13 @@
 ﻿
 <?php
 	require_once("BDD.php");
-	
-?>
+	if(isset($_POST['confirmer']) AND ($_POST['confirmer'] == 'Confirmer')){ 
+		header("Location:confirmation.php"); 
+	} 
+	if(isset($_POST['stat']) AND ($_POST['stat'] == 'Stat')){ 
+		header("Location:statistique.php"); 
+	}
+	?>
 
 
 <!DOCTYPE html>
@@ -19,7 +24,7 @@
 	
 	
 		<div class="corps">
-				<h1>Questionnaire<h1>
+				<h1>Questionnaire</h1>
 				<h3>En moins de 12 min</h3>
 				<h3>Seulement les questions <span class="sanssautdeligne">*</span> sont obligatoires</h3>
 				<h3>Essayez de ne pas laisser de reponses neutres</h3>
@@ -541,11 +546,13 @@
 					  </br>
 					  </br>
 					  
+					  <div style="margin-left: 870px;"><input type="submit" name="confirmer" id="confirmer" value="Confirmer" disabled > </div><br><br>
+					   <div style="margin-left: 870px;"><input type="submit" name="stat" id="stat" value="Stat"  > </div><br><br>
 					  
-					  
-					<div style="margin-left: 870px;"><input type="submit" name="confirmer" id="confirmer" value="Confirmer" disabled></div><br><br>
+					
 					
 				</form>	
+				
 		</div>	
 	</body>
 	<script language="javascript" type="text/javascript">
@@ -632,14 +639,6 @@
 				com11.value='';
 				com11.disabled = true;
 			} 
-		}
-		
-	function verifAge(champ){
-		var bouton = document.getElementById('confirmer');
-		var age = parseInt(champ.value);
-		if(isNaN(age) || age < 100 && age > 0){
-		 bouton.disabled=false;
-		}
 	}
 		
 	function verif(){
@@ -672,7 +671,6 @@
 				
 				$sexe=$_POST['sexe'];
 				$age=$_POST['age'];	
-				// $region=$_POST['qRegion'];
 				$region=$_POST['region'];
 				
 				$reponse1=$_POST['choix1'];

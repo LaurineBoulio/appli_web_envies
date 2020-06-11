@@ -1,4 +1,4 @@
-
+ï»¿
 <!DOCTYPE html>
 <html lang=fr dir="ltr">
 	<head>
@@ -10,8 +10,8 @@
 	</head>
 	<body>
 		<div class="corps">
-			<h1>Votre participation a bien été prise en compte</h1>
-			<h3>Merci d'avoir répondu à notre questionnaire ! Votre retour va être traité et analysé avce les plus grands soins.<h3>
+			<h1>Votre participation a bien Ã©tÃ© prise en compte</h1>
+			<h3>Merci d'avoir rÃ©pondu Ã  notre formulaire ! Votre retour va Ãªtre traitÃ© et analysÃ© avec les plus grands soins.<h3>
 		</div>
 	
 	</body>
