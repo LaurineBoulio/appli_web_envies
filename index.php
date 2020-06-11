@@ -29,80 +29,51 @@
 				
 					<h2>0. Qui êtes-vous ?</h2>			
 					<div class="reponse">
-						<label for="sexeChoix1"><h3>Sexe : <span class="sanssautdeligne">*</span></h3></label>
-						<input type="radio" id="SexeChoix1"
-						 name="qSexe" value="F" checked>
-						<label for="sexeChoix1">F</label>
-						<input type="radio" id="SexeChoix2"
-						 name="qSexe" value="G">
-						<label for="sexeChoix2">G</label>
+						<label for="sexe"><h3>Sexe : <span class="sanssautdeligne">*</span></h3></label>
+						<SELECT name="sexe" id="sexe" size="1" onblur="verif()">
+						<OPTION value='Choisir le sexe'>Choisir le sexe</OPTION>
+						<OPTION value='Femme'>Femme</OPTION>
+						<OPTION value='Homme'>Homme</OPTION>
+						<OPTION value='Autre'>Autre</OPTION>
+						</SELECT>
+						
 						 </br>				
 						<label for="age"><h3>Age: <span class="sanssautdeligne">*</span></h3></label>
-						<input type="text" name="age" id="age" size="3" onblur="verifAge(this)">
+						<SELECT name="age" size="1" id="age" onblur="verif()">
+						<OPTION value='Choisir age'>Choisir l'âge</OPTION>
+						<OPTION value='moins de 15 ans'>moins de 15 ans</OPTION>
+						<OPTION value='15/17 ans'>15/17 ans</OPTION>
+						<OPTION value='18/24 ans'>18/24 ans</OPTION>
+						<OPTION value='25/34 ans'>25/34 ans</OPTION>
+						<OPTION value='35/49 ans'>35/49 ans</OPTION>
+						<OPTION value='50/64 ans'>50/64 ans</OPTION>
+						<OPTION value='65 ans et plus'>65 ans et plus</OPTION>
+						</SELECT>
+						
 						 </br>
-						<label for="regionChoix"><h3>Région : <span class="sanssautdeligne">*</span></h3></label> </br>
-						<section>
-							<input type="radio" id="region1"
-							 name="qRegion" value="Auvergne-Rhône-Alpes" checked>
-							<label for="Region1">Auvergne-Rhône-Alpes</label>
-							 </br>
-							 <input type="radio" id="region2"
-							 name="qRegion" value="Bourgogne-Franche-Comte">
-							<label for="Region2">Bourgogne-Franche-Comte</label>
-							 </br>
-							<input type="radio" id="region3"
-							 name="qRegion" value="Bretagne">
-							<label for="Region3">Bretagne</label>
-							 </br>
-							 <input type="radio" id="region4"
-							 name="qRegion" value="Centre-Val de Loire">
-							<label for="Region4">Centre-Val de Loire</label>
-							 </br>					
-							<input type="radio" id="region5"
-							 name="qRegion" value="Corse">
-							<label for="Region5">Corse</label>
-							 </br> 
-							<input type="radio" id="region6"
-							 name="qRegion" value="Grand Est">
-							<label for="Region6">Grand Est</label>
-							 </br>
-							<input type="radio" id="region7"
-							 name="qRegion" value="Hauts-de-France">
-							<label for="Region7">Hauts-de-France</label>
-							 </br> 
-							<input type="radio" id="region8"
-							 name="qRegion" value="Ile-de-France">
-							<label for="Region8">Ile-de-France</label>
-							 </br>
-							<input type="radio" id="region9"
-							 name="qRegion" value="Normandie">
-							<label for="Region9">Normandie</label>					
-							 </br>				
-							<input type="radio" id="region10"
-							 name="qRegion" value="Nouvelle-Aquitaine">
-							<label for="Region10">Nouvelle-Aquitaine</label>		
-							 </br>
-							<input type="radio" id="region11"
-							 name="qRegion" value="Occitanie">
-							<label for="Region11">Occitanie</label>
-							 </br>						 
-							<input type="radio" id="region12"
-							 name="qRegion" value="Pays de la Loire">
-							<label for="Region12">Pays de la Loire</label>			
-							 </br>
-							<input type="radio" id="region13"
-							 name="qRegion" value="Provence-Alpes-Cote d'Azur">
-							<label for="Region13">Provence-Alpes-Côte d'Azur</label>
-							 </br>
-						</section>
+						<label for="region"><h3>Région : <span class="sanssautdeligne">*</span></h3></label>
+						
+						<SELECT name="region" size="1" id="region" onblur="verif()">
+						<OPTION value='Choisir region'>Choisir la région</OPTION>
+						<OPTION value='Auvergne-Rhône-Alpes'>Auvergne-Rhône-Alpes</OPTION>
+						<OPTION value='Bourgogne-Franche-Comte'>Bourgogne-Franche-Comté</OPTION>
+						<OPTION value='Bretagne'>Bretagne</OPTION>
+						<OPTION value='Centre-Val de Loire'>Centre-Val de Loire</OPTION>
+						<OPTION value='Corse'>Corse</OPTION>
+						<OPTION value='Grand Est'>Grand Est</OPTION>
+						<OPTION value='Hauts-de-France'>Hauts-de-France</OPTION>
+						<OPTION value='Ile-de-France'>Ile-de-France</OPTION>
+						<OPTION value='Normandie'>Normandie</OPTION>
+						<OPTION value='Nouvelle-Aquitaine'>Nouvelle-Aquitaine</OPTION>
+						<OPTION value='Occitanie'>Occitanie</OPTION>
+						<OPTION value='Pays de la Loire'>Pays de la Loire</OPTION>
+						<OPTION value='Provence-Alpes-Côte d Azur'>Provence-Alpes-Côte d'Azur</OPTION>
+						</SELECT>
+					
 					</div>
 					
 					<h2>1. Pour vous, des vacances de rêve riment avec : </h2>
 					<div class="reponse">
-						<input type="radio" id="Formulaire0a"
-						 name="choix1" value="nul" checked onclick="griser(this)">
-						<label for="formulaire1a">Pas de réponse</label>
-						 </br>
 						<input type="radio" id="Formulaire1A"
 						 name="choix1" value="campagne" onclick="griser(this)">
 						<label for="formulaire1A">Campagne</label>
@@ -120,14 +91,14 @@
 						<label for="formulaire1D">Autre</label>
 						<input type="text" id="commentaire1" name="commentaire1"  maxlength="30" size="30" disabled >	
 						</br>
+						<input type="radio" id="Formulaire0a"
+						 name="choix1" value="nul" checked onclick="griser(this)">
+						<label for="formulaire1a">Pas de réponse</label>
+						 </br>
 					</div>
 					
 					<h2>2. Quand vous sortez entre amis, vous préférez aller : </h2>
 					<div class="reponse">
-						<input type="radio" id="Formulaire2a"
-						 name="choix2" value="nul" checked onclick="griser(this)">
-						<label for="formulaire2a">Pas de réponse</label>
-						 </br>
 						<input type="radio" id="Formulaire2A"
 						 name="choix2" value="bar" onclick="griser(this)">
 						<label for="formulaire2A">Bar</label>
@@ -148,15 +119,15 @@
 						name="choix2" value="autre2" onclick="nonGriser(this)">
 						<label for="formulaire2E">Autre</label>
 						<input type="text" id="commentaire2" name="commentaire2"  maxlength="30" size="30" disabled >	
-						</br>						 
+						 </br>
+						<input type="radio" id="Formulaire2a"
+						 name="choix2" value="nul" checked onclick="griser(this)">
+						<label for="formulaire2a">Pas de réponse</label>
+						 </br>						
 					</div>
 					
 					<h2>3. Le soir vous aimez : </h2>
 					<div class="reponse">
-						<input type="radio" id="Formulaire3a"
-						 name="choix3" value="nul" checked onclick="griser(this)">
-						<label for="formulaire3a">Pas de réponse</label>
-						 </br>
 						<input type="radio" id="Formulaire3A"
 						 name="choix3" value="jeu" onclick="griser(this)">
 						<label for="formulaire3A">Jouer à votre jeu préféré</label>
@@ -177,15 +148,15 @@
 						name="choix3" value="autre3" onclick="nonGriser(this)">
 						<label for="formulaire3E">Autre</label>
 						<input type="text" id="commentaire3" name="commentaire3"  maxlength="30" size="30" disabled >	
-						</br>
+						 </br>
+						<input type="radio" id="Formulaire3a"
+						 name="choix3" value="nul" checked onclick="griser(this)">
+						<label for="formulaire3a">Pas de réponse</label>
+						 </br>
 					</div>
 					
 					<h2>4. Quand vous prenez un verre en terrasse, c'est plutôt : </h2>
 					<div class="reponse">
-						<input type="radio" id="Formulaire4a"
-						 name="choix4" value="nul" checked onclick="griser(this)">
-						<label for="formulaire4a">Pas de réponse</label>
-						 </br>
 						<input type="radio" id="Formulaire4A"
 						 name="choix4" value="eau" onclick="griser(this)">
 						<label for="formulaire4A">De l'eau</label>
@@ -214,15 +185,15 @@
 						name="choix4" value="autre4" onclick="nonGriser(this)">
 						<label for="formulaire4G">Autre</label>
 						<input type="text" id="commentaire4" name="commentaire4"  maxlength="30" size="30" disabled >	
-						</br>						 
+						 </br>	
+						<input type="radio" id="Formulaire4a"
+						 name="choix4" value="nul" checked onclick="griser(this)">
+						<label for="formulaire4a">Pas de réponse</label>
+						 </br>						 
 					</div>
 					
 					<h2>5. Quelle serait l'habitation idéale ? </h2>
 					<div class="reponse">
-						<input type="radio" id="Formulaire5a"
-						 name="choix5" value="nul" checked onclick="griser(this)">
-						<label for="formulaire5a">Pas de réponse</label>
-						 </br>
 						<input type="radio" id="Formulaire5A"
 						 name="choix5" value="appartVille" onclick="griser(this)">
 						<label for="formulaire5A">Un appartement en ville</label>
@@ -239,16 +210,16 @@
 						name="choix5" value="autre5" onclick="nonGriser(this)">
 						<label for="formulaire5D">Autre</label>
 						<input type="text" id="commentaire5" name="commentaire5"  maxlength="30" size="30" disabled >	
-						</br>						 
+						 </br>
+						<input type="radio" id="Formulaire5a"
+						 name="choix5" value="nul" checked onclick="griser(this)">
+						<label for="formulaire5a">Pas de réponse</label>
+						 </br>						
 					</div>
 
 					<h2>6. Quel animal de compagnie aimeriez-vous avoir :</h2>
 					<div class="reponse">
 						<section>
-							<input type="radio" id="Formulaire6a"
-							 name="choix6" value="nul" checked onclick="griser(this)">
-							<label for="formulaire6a">Pas de réponse</label>
-							 </br>
 							<input type="radio" id="Formulaire6A"
 							 name="choix6" value="aucun" onclick="griser(this)">
 							<label for="formulaire6A">Aucun</label>
@@ -289,6 +260,10 @@
 							name="choix6" value="autre6" onclick="nonGriser(this)">
 							<label for="formulaire6J">Autre</label>
 							<input type="text" id="commentaire6" name="commentaire6"  maxlength="30" size="30" disabled >	
+							 </br>	
+							<input type="radio" id="Formulaire6a"
+							 name="choix6" value="nul" checked onclick="griser(this)">
+							<label for="formulaire6a">Pas de réponse</label>
 							 </br>							 
 						</section>
 						</div>
@@ -296,10 +271,6 @@
 						<h2>7. Quelle catégorie de film vous attire le plus ?</h2>
 					<div class="reponse">
 						<section>
-							<input type="radio" id="Formulaire7a"
-							 name="choix7" value="nul" checked onclick="griser(this)">
-							<label for="formulaire7a">Pas de réponse</label>
-							 </br>
 							<input type="radio" id="Formulaire7A"
 							 name="choix7" value="animation" onclick="griser(this)">
 							<label for="formulaire7A">Animation</label>
@@ -337,16 +308,16 @@
 							<label for="formulaire7K">Autre</label>
 							<input type="text" id="commentaire7" name="commentaire7"  maxlength="30" size="30" disabled >	
 							 </br>
+							<input type="radio" id="Formulaire7a"
+							 name="choix7" value="nul" checked onclick="griser(this)">
+							<label for="formulaire7a">Pas de réponse</label>
+							 </br>
 						</section>
 						</div>
 						
 						<h2>8. Quel genre de musique écoutez-vous ?</h2>
 					<div class="reponse">
 						<section>
-							<input type="radio" id="Formulaire8a"
-							 name="choix8" value="nul" checked onclick="griser(this)">
-							<label for="formulaire8a">Pas de réponse</label>
-							 </br>
 							<input type="radio" id="Formulaire8A"
 							 name="choix8" value="blues" onclick="griser(this)">
 							<label for="formulaire8A">Blues</label>
@@ -391,17 +362,17 @@
 							name="choix8" value="autre8" onclick="nonGriser(this)">
 							<label for="formulaire8K">Autre</label>
 							<input type="text" id="commentaire8" name="commentaire8"  maxlength="30" size="30" disabled >	
-							 </br>						 
+							 </br>	
+							<input type="radio" id="Formulaire8a"
+							 name="choix8" value="nul" checked onclick="griser(this)">
+							<label for="formulaire8a">Pas de réponse</label>
+							 </br>							 
 						</section>
 						</div>
 						
 						<h2>9. Le weekend arrive, c'est le moment de relâcher la pression ! Quel plat vous donne le plus envie ?</h2>
 					<div class="reponse">
 						<section>
-							<input type="radio" id="Formulaire9a"
-							 name="choix9" value="nul" checked onclick="griser(this)">
-							<label for="formulaire9a">Pas de réponse</label>
-							 </br>
 							<input type="radio" id="Formulaire9A"
 							 name="choix9" value="africain" onclick="griser(this)">
 							<label for="formulaire9A">Africain</label>
@@ -446,6 +417,10 @@
 							name="choix9" value="autre9" onclick="nonGriser(this)">
 							<label for="formulaire9K">Autre</label>
 							<input type="text" id="commentaire9" name="commentaire9"  maxlength="30" size="30" disabled >	
+							 </br>	
+							<input type="radio" id="Formulaire9a"
+							 name="choix9" value="nul" checked onclick="griser(this)">
+							<label for="formulaire9a">Pas de réponse</label>
 							 </br>							 
 						</section>
 						</div>
@@ -454,10 +429,6 @@
 						<h2>10. Quel sport vous plaît le plus ?</h2>
 					<div class="reponse">
 						<section>
-							<input type="radio" id="Formulaire10a"
-							 name="choix10" value="nul" checked onclick="griser(this)">
-							<label for="formulaire10a">Pas de réponse</label>
-							 </br>
 							<input type="radio" id="Formulaire10A"
 							 name="choix10" value="basket-ball" onclick="griser(this)">
 							<label for="formulaire10A">Basket-ball</label>
@@ -502,7 +473,11 @@
 							name="choix10" value="autre10" onclick="nonGriser(this)">
 							<label for="formulaire10K">Autre</label>
 							<input type="text" id="commentaire10" name="commentaire10"  maxlength="30" size="30" disabled >	
-							 </br>						 
+							 </br>	
+							<input type="radio" id="Formulaire10a"
+							 name="choix10" value="nul" checked onclick="griser(this)">
+							<label for="formulaire10a">Pas de réponse</label>
+							 </br>
 						</section>
 						
 					</div>
@@ -510,10 +485,6 @@
 					<h2>11. Quelle est votre destination de rêve ?</h2>
 					<div class="reponse">
 						<section>
-							<input type="radio" id="Formulaire11a"
-							 name="choix11" value="nul" checked onclick="griser(this)">
-							<label for="formulaire11a">Pas de réponse</label>
-							 </br>
 							<input type="radio" id="Formulaire11A"
 							 name="choix11" value="allemagne" onclick="griser(this)">
 							<label for="formulaire11A">Allemagne</label>
@@ -557,9 +528,11 @@
 							<input type="radio" id="Formulaire11K"
 							 name="choix11" value="autre11" onclick="nonGriser(this)">
 							<label for="formulaire11K">Autre</label>
-							<input type="text" id="commentaire11" name="commentaire11"  maxlength="30" size="30" disabled >		
-						
-							
+							<input type="text" id="commentaire11" name="commentaire11"  maxlength="30" size="30" disabled>	
+							 </br>	
+							<input type="radio" id="Formulaire11a"
+							 name="choix11" value="nul" checked onclick="griser(this)">
+							<label for="formulaire11a">Pas de réponse</label>
 							 </br>							 
 						</section>
 						
@@ -669,6 +642,27 @@
 		}
 	}
 		
+	function verif(){
+		var bouton = document.getElementById('confirmer');
+		var listeSexe = document.getElementById('sexe');
+		var valeurSexe = listeSexe.options[listeSexe.selectedIndex].value;
+		var listeAge = document.getElementById('age');
+		var valeurAge = listeAge.options[listeAge.selectedIndex].value;
+		var listeRegion = document.getElementById('region');
+		var valeurRegion = listeRegion.options[listeRegion.selectedIndex].value;
+		 
+		if(valeurSexe != 'Choisir le sexe' && valeurAge != 'Choisir age' && valeurRegion != 'Choisir region'){
+			bouton.disabled=false;
+		}
+		else{
+			bouton.disabled=true;
+		}  
+		
+	}
+		
+		
+	
+		
 	
 	</script>
 </html>
@@ -676,9 +670,10 @@
 <?php
 			if(isset($_POST['confirmer'])){
 				
-				$sexe=$_POST['qSexe'];
+				$sexe=$_POST['sexe'];
 				$age=$_POST['age'];	
-				$region=$_POST['qRegion'];
+				// $region=$_POST['qRegion'];
+				$region=$_POST['region'];
 				
 				$reponse1=$_POST['choix1'];
 				$reponse2=$_POST['choix2'];
