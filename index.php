@@ -36,43 +36,43 @@
 					<div class="reponse">
 						<label for="sexe"><h3>Sexe : <span class="sanssautdeligne">*</span></h3></label>
 						<SELECT name="sexe" id="sexe" size="1" onblur="verif()">
-						<OPTION value='Choisir le sexe'>Choisir le sexe</OPTION>
-						<OPTION value='Femme'>Femme</OPTION>
-						<OPTION value='Homme'>Homme</OPTION>
-						<OPTION value='Autre'>Autre</OPTION>
+							<OPTION value='Choisir le sexe'>Choisir le sexe</OPTION>
+							<OPTION value='Femme'>Femme</OPTION>
+							<OPTION value='Homme'>Homme</OPTION>
+							<OPTION value='Autre'>Autre</OPTION>
 						</SELECT>
 						
 						 </br>				
 						<label for="age"><h3>Age: <span class="sanssautdeligne">*</span></h3></label>
 						<SELECT name="age" size="1" id="age" onblur="verif()">
-						<OPTION value='Choisir age'>Choisir l'âge</OPTION>
-						<OPTION value='moins de 15 ans'>moins de 15 ans</OPTION>
-						<OPTION value='15/17 ans'>15/17 ans</OPTION>
-						<OPTION value='18/24 ans'>18/24 ans</OPTION>
-						<OPTION value='25/34 ans'>25/34 ans</OPTION>
-						<OPTION value='35/49 ans'>35/49 ans</OPTION>
-						<OPTION value='50/64 ans'>50/64 ans</OPTION>
-						<OPTION value='65 ans et plus'>65 ans et plus</OPTION>
+							<OPTION value='Choisir age'>Choisir l'âge</OPTION>
+							<OPTION value='moins de 15 ans'>moins de 15 ans</OPTION>
+							<OPTION value='15/17 ans'>15/17 ans</OPTION>
+							<OPTION value='18/24 ans'>18/24 ans</OPTION>
+							<OPTION value='25/34 ans'>25/34 ans</OPTION>
+							<OPTION value='35/49 ans'>35/49 ans</OPTION>
+							<OPTION value='50/64 ans'>50/64 ans</OPTION>
+							<OPTION value='65 ans et plus'>65 ans et plus</OPTION>
 						</SELECT>
 						
 						 </br>
 						<label for="region"><h3>Région : <span class="sanssautdeligne">*</span></h3></label>
 						
 						<SELECT name="region" size="1" id="region" onblur="verif()">
-						<OPTION value='Choisir region'>Choisir la région</OPTION>
-						<OPTION value='Auvergne-Rhône-Alpes'>Auvergne-Rhône-Alpes</OPTION>
-						<OPTION value='Bourgogne-Franche-Comte'>Bourgogne-Franche-Comté</OPTION>
-						<OPTION value='Bretagne'>Bretagne</OPTION>
-						<OPTION value='Centre-Val de Loire'>Centre-Val de Loire</OPTION>
-						<OPTION value='Corse'>Corse</OPTION>
-						<OPTION value='Grand Est'>Grand Est</OPTION>
-						<OPTION value='Hauts-de-France'>Hauts-de-France</OPTION>
-						<OPTION value='Ile-de-France'>Ile-de-France</OPTION>
-						<OPTION value='Normandie'>Normandie</OPTION>
-						<OPTION value='Nouvelle-Aquitaine'>Nouvelle-Aquitaine</OPTION>
-						<OPTION value='Occitanie'>Occitanie</OPTION>
-						<OPTION value='Pays de la Loire'>Pays de la Loire</OPTION>
-						<OPTION value='Provence-Alpes-Côte d Azur'>Provence-Alpes-Côte d'Azur</OPTION>
+							<OPTION value='Choisir region'>Choisir la région</OPTION>
+							<OPTION value='Auvergne-Rhône-Alpes'>Auvergne-Rhône-Alpes</OPTION>
+							<OPTION value='Bourgogne-Franche-Comte'>Bourgogne-Franche-Comté</OPTION>
+							<OPTION value='Bretagne'>Bretagne</OPTION>
+							<OPTION value='Centre-Val de Loire'>Centre-Val de Loire</OPTION>
+							<OPTION value='Corse'>Corse</OPTION>
+							<OPTION value='Grand Est'>Grand Est</OPTION>
+							<OPTION value='Hauts-de-France'>Hauts-de-France</OPTION>
+							<OPTION value='Ile-de-France'>Ile-de-France</OPTION>
+							<OPTION value='Normandie'>Normandie</OPTION>
+							<OPTION value='Nouvelle-Aquitaine'>Nouvelle-Aquitaine</OPTION>
+							<OPTION value='Occitanie'>Occitanie</OPTION>
+							<OPTION value='Pays de la Loire'>Pays de la Loire</OPTION>
+							<OPTION value='Provence-Alpes-Côte d Azur'>Provence-Alpes-Côte d'Azur</OPTION>
 						</SELECT>
 					
 					</div>
