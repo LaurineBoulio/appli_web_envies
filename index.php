@@ -3,11 +3,17 @@
 	require_once("BDD.php");
 	if(isset($_POST['confirmer']) AND ($_POST['confirmer'] == 'Confirmer')){ 
 		header("Location:confirmation.php"); 
-	} 
-	if(isset($_POST['stat']) AND ($_POST['stat'] == 'Stat')){ 
-		header("Location:statistique.php"); 
 	}
-	?>
+	
+	if(isset($_POST['stats']) AND ($_POST['stats'] == 'Statistiques')){ 
+		header("Location:statistiques.php"); 
+	}
+	
+	
+	?>	
+		
+	
+	
 
 
 <!DOCTYPE html>
@@ -18,20 +24,30 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" href="assets/css/style.css">
 		<title>Vos envies</title>
+		
 	</head>
 	<body>
+<div class="header" style=" height:60px;  background-color: #cc0052; color:#ffffff; font-size:30px;">
+	<form method='post' action='#'>	
+	
 
+	<p style="float:left; padding-top:5px;"><img src="assets/img/logo.png" style="width:100px; height:100px; margin-left:10px"/></p>
+<p>Vos envies
+
+		
+	<input type="submit" value="Statistiques" id="stats" name="stats" class="submit" style="margin-right:630px;float:right;background:none;color:#ffffff;border:none;font-size:20px;padding-top:5px;padding-top:25px;  border-top-right-radius: 0.5rem; border-bottom-right-radius: 0.5rem;"/>
+
+	<input type="submit" value="Questionnaire	|" name="qcm" style="margin-right:0px;float:right;background:none;color:#ffffff;border:none;font-size:20px;padding-top:25px;border-top-left-radius: 0.5rem; border-bottom-left-radius: 0.5rem;" disabled/></p>
+</div>
+	</div>
 	
 	
-		<div class="corps">
+		<div class="corps" style="height: 4200px;">
+			<form method='post' action='#'>		
 				<h1>Questionnaire</h1>
 				<h3>En moins de 12 min</h3>
 				<h3>Seulement les questions <span class="sanssautdeligne">*</span> sont obligatoires</h3>
 				<h3>Essayez de ne pas laisser de reponses neutres</h3>
-				
-				
-				<form method='post' action='#'>
-				
 					<h2>0. Qui êtes-vous ?</h2>			
 					<div class="reponse">
 						<label for="sexe"><h3>Sexe : <span class="sanssautdeligne">*</span></h3></label>
@@ -547,7 +563,7 @@
 					  </br>
 					  
 					  <div style="margin-left: 870px;"><input type="submit" name="confirmer" id="confirmer" value="Confirmer" disabled > </div><br><br>
-					   <div style="margin-left: 870px;"><input type="submit" name="stat" id="stat" value="Stat"  > </div><br><br>
+					   
 					  
 					
 					

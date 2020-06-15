@@ -2,7 +2,18 @@
 <?php
 	require_once("BDD.php");
 	
-	?>
+
+	
+	if(isset($_POST['stats']) AND ($_POST['stats'] == 'Statistiques')){ 
+		header("Location:statistiques.php"); 
+	}
+	
+	if(isset($_POST['qcm']) AND ($_POST['qcm'] == 'Questionnaire	|')){ 
+		header("Location:index.php"); 
+	}
+	
+	?>	
+	
 
 
 <!DOCTYPE html>
@@ -15,14 +26,27 @@
 		<title>Vos envies</title>
 	</head>
 	<body>
-			
+
+	<div class="header" style=" height:60px;  background-color: #cc0052; color:#ffffff; font-size:30px;">
+	<form method='post' action='#'>	
+	
+
+	<p style="float:left; padding-top:5px;"><img src="assets/img/logo.png" style="width:100px; height:100px; margin-left:10px"/></p>
+<p>Vos envies
+
+		
+	<input type="submit" value="Statistiques" id="stats" name="stats" class="submit" style="margin-right:630px;float:right;background:none;color:#ffffff;border:none;font-size:20px;padding-top:5px;padding-top:25px;  border-top-right-radius: 0.5rem; border-bottom-right-radius: 0.5rem;" disabled/>
+
+	<input type="submit" value="Questionnaire	|" name="qcm" style="margin-right:0px;float:right;background:none;color:#ffffff;border:none;font-size:20px;padding-top:25px;border-top-left-radius: 0.5rem; border-bottom-left-radius: 0.5rem;" /></p>
+</div>
+	</form>
 	
 	
-		<div class="corps">
-				<h1>Statistique</h1>
+		<div class="corps" style="height: 5790px;">
+				<h1>Statistiques</h1>
 				<form method='post' action='#'>
 				<div class="reponse">
-				<label for="critere"><h3>Critères : </h3></label>
+				<label for="critere"><h2>Critères : </h2></label>
 				
 				<SELECT name="sexe" id="sexe" size="1" >
 						<OPTION value='Choisir sexe'>Sexe</OPTION>
@@ -63,7 +87,7 @@
 					<OPTION value='Provence-Alpes-Côte d Azur'>Provence-Alpes-Côte d'Azur</OPTION>
 				</SELECT>
 				
-				 <div style="margin-left: 870px;"><input type="submit" name="valider" id="valider" value="Valider"  > </div><br><br>
+				 <input type="submit" name="valider" id="valider" value="Valider"></br></br>
 				
 				</div>
 				
@@ -218,7 +242,11 @@
 					$query =$bdd->prepare('SELECT * FROM personne');
 					$query->execute(array());
 				}
-						
+			}else{
+				$bdd = connectDb();
+					$query =$bdd->prepare('SELECT * FROM personne');
+					$query->execute(array());
+				}	
 						
 				while ($data = $query->fetch()){
 					$nbPersonne += 1;
@@ -347,13 +375,10 @@
 				}
 
 				 $query->closeCursor();
-				 echo "<p>$nbPersonne personne(s) trouvé(s) dans la base de données</p>";
 				 
 					 
 			
-					
 				
-			}
 			//question 1
 			if($campagne !=0) $campagne=($campagne/$nbPersonne)*100;
 			if($plage !=0) $plage =($plage/$nbPersonne)*100;
@@ -804,22 +829,40 @@ chart11.render();
 	
 
 </script>
+
+<?php
+ echo "<center><p>$nbPersonne personne(s) trouvé(s) dans la base de données</p></center>";
+?>
+
+</br></br>
+
 <div class="graphique" >
-
-<div id="chartContainer" style="margin-left: 300px; height: 370px; width: 40%;"></div>
-<div id="chartContainer2" style="margin-left: 300px; height: 370px; width: 40%;"></div>
-<div id="chartContainer3" style="margin-left: 300px; height: 370px; width: 40%;"></div>
-<div id="chartContainer4" style="margin-left: 300px; height: 370px; width: 40%;"></div>
-<div id="chartContainer5" style="margin-left: 300px; height: 370px; width: 40%;"></div>
-<div id="chartContainer6" style="margin-left: 300px; height: 370px; width: 40%;"></div>
-<div id="chartContainer7" style="margin-left: 300px; height: 370px; width: 40%;"></div>
-<div id="chartContainer8" style="margin-left: 300px; height: 370px; width: 40%;"></div>
-<div id="chartContainer9" style="margin-left: 300px; height: 370px; width: 40%;"></div>
-<div id="chartContainer10" style="margin-left: 300px; height: 370px; width: 40%;"></div>
-<div id="chartContainer11" style="margin-left: 300px; height: 370px; width: 40%;"></div>
-
+	<div id="chartContainer" style="height: 400px; width: 100%;"></div>
+	</br></br></br></br>
+	<div id="chartContainer2" style="height: 400px; width: 100%;"></div>
+	</br></br></br></br>
+	<div id="chartContainer3" style="height: 400px; width: 100%;"></div>
+	</br></br></br></br>
+	<div id="chartContainer4" style="height: 400px; width: 100%;"></div>
+	</br></br></br></br>
+	<div id="chartContainer5" style="height: 400px; width: 100%;"></div>
+	</br></br></br></br>
+	<div id="chartContainer6" style="height: 400px; width: 100%;"></div>
+	</br></br></br></br>
+	<div id="chartContainer7" style="height: 400px; width: 100%;"></div>
+	</br></br></br></br>
+	<div id="chartContainer8" style="height: 400px; width: 100%;"></div>
+	</br></br></br></br>
+	<div id="chartContainer9" style="height: 400px; width: 100%;"></div>
+	</br></br></br></br>
+	<div id="chartContainer10" style="height: 400px; width: 100%;"></div>
+	</br></br></br></br>
+	<div id="chartContainer11" style="height: 400px; width: 100%;"></div>
 </div>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+</br></br></br>
+			
 		
 			</form>
 		</div>	
