@@ -34,11 +34,11 @@
 
 	<p style="float:left; padding-top:5px;"><img src="assets/img/logo.png" style="width:100px; height:100px; margin-left:10px"/></p>
 <p>Vos envies
+<input type="submit" value="Questionnaire	|" name="qcm" style="margin-left:100px; text-align: center;background:none;color:#ffffff;border:none;font-size:20px;padding-top:25px; ">	
 
-		
-	<input type="submit" value="Statistiques" id="stats" name="stats" class="submit" style="margin-right:630px;float:right;background:none;color:#ffffff;border:none;font-size:20px;padding-top:5px;padding-top:25px;  border-top-right-radius: 0.5rem; border-bottom-right-radius: 0.5rem;"/>
-
-	<input type="submit" value="Questionnaire	|" name="qcm" style="margin-right:0px;float:right;background:none;color:#ffffff;border:none;font-size:20px;padding-top:25px;border-top-left-radius: 0.5rem; border-bottom-left-radius: 0.5rem;" disabled/></p>
+	<input type="submit" value="Statistiques" id="stats" name="stats" class="submit" style="background:none;color:#ffffff;border:none;font-size:20px;padding-top:25px;  ">
+	
+	</p>
 </div>
 	</div>
 	
