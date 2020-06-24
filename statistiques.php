@@ -404,10 +404,10 @@
 			if($autre2 !=0) $autre2=($autre2/$nbPersonne)*100;
 			
 			$dataPoints2 = array( 
-			array("label"=>"bar", "y"=> $bar),
-			array("label"=>"cinema", "y"=> $cinema),
-			array("label"=>"concert", "y"=> $concert),
-			array("label"=>"magasin", "y"=> $magasin),
+			array("label"=>"Bar", "y"=> $bar),
+			array("label"=>"Cinéma", "y"=> $cinema),
+			array("label"=>"Concert", "y"=> $concert),
+			array("label"=>"Magasin", "y"=> $magasin),
 			array("label"=>"Pas de réponse", "y"=> $nul2),
 			array("label"=>"Autre", "y"=> $autre2),
 			);	
@@ -421,10 +421,10 @@
 			if($autre3 !=0) $autre3=($autre3/$nbPersonne)*100;
 			
 			$dataPoints3 = array( 
-			array("label"=>"jouer", "y"=> $jouer),
-			array("label"=>"lire", "y"=> $lire),
-			array("label"=>"tele", "y"=> $tele),
-			array("label"=>"portable", "y"=> $portable),
+			array("label"=>"Jouer aux jeux vidéo", "y"=> $jouer),
+			array("label"=>"Lire", "y"=> $lire),
+			array("label"=>"Regarder la télévision", "y"=> $tele),
+			array("label"=>"Rester sur son portable", "y"=> $portable),
 			array("label"=>"Pas de réponse", "y"=> $nul3),
 			array("label"=>"Autre", "y"=> $autre3),
 			);	
@@ -439,11 +439,11 @@
 			if($autre4 !=0) $autre4=($autre4/$nbPersonne)*100;
 			
 			$dataPoints4 = array( 
-			array("label"=>"eau", "y"=> $eau),
-			array("label"=>"cafe", "y"=> $cafe),
-			array("label"=>"jus de fruit", "y"=> $jusFruit),
-			array("label"=>"soda", "y"=> $soda),
-			array("label"=>"biere", "y"=> $biere),
+			array("label"=>"Eau", "y"=> $eau),
+			array("label"=>"Café", "y"=> $cafe),
+			array("label"=>"Jus de fruit", "y"=> $jusFruit),
+			array("label"=>"Soda", "y"=> $soda),
+			array("label"=>"Bière", "y"=> $biere),
 			array("label"=>"Pas de réponse", "y"=> $nul4),
 			array("label"=>"Autre", "y"=> $autre4),
 			);	
@@ -456,11 +456,9 @@
 			if($autre5 !=0) $autre5=($autre5/$nbPersonne)*100;
 			
 			$dataPoints5 = array( 
-			array("label"=>"appartVille", "y"=> $appartVille),
-			array("label"=>"cabaneForet", "y"=> $cabaneForet),
-			array("label"=>"maisonCampagne", "y"=> $maisonCampagne),
-			array("label"=>"soda", "y"=> $soda),
-			array("label"=>"biere", "y"=> $biere),
+			array("label"=>"Appartement en ville", "y"=> $appartVille),
+			array("label"=>"Cabane en forêt", "y"=> $cabaneForet),
+			array("label"=>"Maison de campagne", "y"=> $maisonCampagne),
 			array("label"=>"Pas de réponse", "y"=> $nul5),
 			array("label"=>"Autre", "y"=> $autre5),
 			);	
@@ -478,14 +476,14 @@
 			if($autre6 !=0) $autre6=($autre6/$nbPersonne)*100;
 			
 			$dataPoints6 = array( 
-			array("label"=>"chat", "y"=> $chat),
-			array("label"=>"chien", "y"=> $chien),
-			array("label"=>"hamster", "y"=> $hamster),
-			array("label"=>"lapin", "y"=> $lapin),
-			array("label"=>"poisson", "y"=> $poisson),
-			array("label"=>"rat", "y"=> $rat),
-			array("label"=>"serpent", "y"=> $serpent),
-			array("label"=>"tortue", "y"=> $tortue),
+			array("label"=>"Chat", "y"=> $chat),
+			array("label"=>"Chien", "y"=> $chien),
+			array("label"=>"Hamster", "y"=> $hamster),
+			array("label"=>"Lapin", "y"=> $lapin),
+			array("label"=>"Poisson", "y"=> $poisson),
+			array("label"=>"Rat", "y"=> $rat),
+			array("label"=>"Serpent", "y"=> $serpent),
+			array("label"=>"Tortue", "y"=> $tortue),
 			array("label"=>"Pas de réponse", "y"=> $nul6),
 			array("label"=>"Autre", "y"=> $autre6),
 			);	
@@ -503,23 +501,23 @@
 			if($autre7 !=0) $autre7=($autre7/$nbPersonne)*100;
 			
 			$dataPoints7 = array( 
-			array("label"=>"animation", "y"=> $animation),
-			array("label"=>"comedie", "y"=> $comedie),
-			array("label"=>"documentaire", "y"=> $documentaire),
-			array("label"=>"drame", "y"=> $drame),
-			array("label"=>"fantastique", "y"=> $fantastique),
-			array("label"=>"horreur", "y"=> $horreur),
-			array("label"=>"thriller", "y"=> $thriller),
-			array("label"=>"science-fiction", "y"=> $science_fiction),
+			array("label"=>"Animation", "y"=> $animation),
+			array("label"=>"Comédie", "y"=> $comedie),
+			array("label"=>"Documentaire", "y"=> $documentaire),
+			array("label"=>"Drame", "y"=> $drame),
+			array("label"=>"Fantastique", "y"=> $fantastique),
+			array("label"=>"Horreur", "y"=> $horreur),
+			array("label"=>"Thriller", "y"=> $thriller),
+			array("label"=>"Science-fiction", "y"=> $science_fiction),
 			array("label"=>"Pas de réponse", "y"=> $nul7),
 			array("label"=>"Autre", "y"=> $autre7),
 			);	
 						
 			//question 8
 			if($blues !=0) $blues=($blues/$nbPersonne)*100;
+			if($classique !=0) $classique= ($classique/$nbPersonne)*100;
 			if($dubstep !=0) $dubstep = ($dubstep/$nbPersonne)*100;
 			if($electro !=0) $electro = ($electro/$nbPersonne)*100;
-			if($drame !=0) $drame= ($drame/$nbPersonne)*100;
 			if($jazz !=0) $jazz=($jazz/$nbPersonne)*100;
 			if($metal !=0) $metal = ($metal/$nbPersonne)*100;
 			if($rap !=0) $rap= ($rap/$nbPersonne)*100;
@@ -530,16 +528,16 @@
 			if($autre8 !=0) $autre8=($autre8/$nbPersonne)*100;
 			
 			$dataPoints8 = array( 
-			array("label"=>"blues", "y"=> $blues),
-			array("label"=>"dubstep", "y"=> $dubstep),
-			array("label"=>"electro", "y"=> $electro),
-			array("label"=>"drame", "y"=> $drame),
-			array("label"=>"fantastique", "y"=> $fantastique),
-			array("label"=>"metal", "y"=> $metal),
-			array("label"=>"rap", "y"=> $rap),
-			array("label"=>"reggae", "y"=> $reggae),
-			array("label"=>"rnb", "y"=> $rnb),
-			array("label"=>"rock", "y"=> $rock),
+			array("label"=>"Blues", "y"=> $blues),
+			array("label"=>"Classqiue", "y"=> $classique),
+			array("label"=>"Dubstep", "y"=> $dubstep),
+			array("label"=>"Electro", "y"=> $electro),
+			array("label"=>"Jazz", "y"=> $jazz),
+			array("label"=>"Métal", "y"=> $metal),
+			array("label"=>"Rap", "y"=> $rap),
+			array("label"=>"Reggae", "y"=> $reggae),
+			array("label"=>"RnB", "y"=> $rnb),
+			array("label"=>"Rock", "y"=> $rock),
 			array("label"=>"Pas de réponse", "y"=> $nul8),
 			array("label"=>"Autre", "y"=> $autre8),
 			);	
@@ -559,16 +557,16 @@
 			if($autre9 !=0) $autre9=($autre9/$nbPersonne)*100;
 			
 			$dataPoints9 = array( 
-			array("label"=>"africain", "y"=> $africain),
-			array("label"=>"algerien", "y"=> $algerien),
-			array("label"=>"chinois", "y"=> $chinois),
-			array("label"=>"fastfood", "y"=> $fastfood),
-			array("label"=>"gastronomique", "y"=> $gastronomique),
-			array("label"=>"indien", "y"=> $indien),
-			array("label"=>"italien", "y"=> $italien),
-			array("label"=>"japonais", "y"=> $japonais),
-			array("label"=>"marocain", "y"=> $marocain),
-			array("label"=>"mexicain", "y"=> $mexicain),
+			array("label"=>"Africain", "y"=> $africain),
+			array("label"=>"Algérien", "y"=> $algerien),
+			array("label"=>"Chinois", "y"=> $chinois),
+			array("label"=>"Fastfood", "y"=> $fastfood),
+			array("label"=>"Gastronomique", "y"=> $gastronomique),
+			array("label"=>"Indien", "y"=> $indien),
+			array("label"=>"Italien", "y"=> $italien),
+			array("label"=>"Japonais", "y"=> $japonais),
+			array("label"=>"Marocain", "y"=> $marocain),
+			array("label"=>"Mexicain", "y"=> $mexicain),
 			array("label"=>"Pas de réponse", "y"=> $nul9),
 			array("label"=>"Autre", "y"=> $autre9),
 			);
@@ -587,15 +585,15 @@
 			if($autre10 !=0) $autre10=($autre10/$nbPersonne)*100;
 			
 			$dataPoints10 = array( 
-			array("label"=>"basket_ball", "y"=> $basket_ball),
-			array("label"=>"canoe_kayak", "y"=> $canoe_kayak),
-			array("label"=>"equitation", "y"=> $equitation),
-			array("label"=>"football", "y"=> $football),
-			array("label"=>"golf", "y"=> $golf),
-			array("label"=>"handball", "y"=> $handball),
-			array("label"=>"judo", "y"=> $judo),
-			array("label"=>"sports_sous_marins", "y"=> $sports_sous_marins),
-			array("label"=>"tennis", "y"=> $tennis),
+			array("label"=>"Basket-ball", "y"=> $basket_ball),
+			array("label"=>"Canoe-kayak", "y"=> $canoe_kayak),
+			array("label"=>"Equitation", "y"=> $equitation),
+			array("label"=>"Football", "y"=> $football),
+			array("label"=>"Golf", "y"=> $golf),
+			array("label"=>"Handball", "y"=> $handball),
+			array("label"=>"Judo", "y"=> $judo),
+			array("label"=>"Sports sous-marins", "y"=> $sports_sous_marins),
+			array("label"=>"Tennis", "y"=> $tennis),
 			array("label"=>"Pas de réponse", "y"=> $nul10),
 			array("label"=>"Autre", "y"=> $autre10),
 			);
@@ -615,16 +613,16 @@
 			if($autre11 !=0) $autre11=($autre11/$nbPersonne)*100;
 			
 			$dataPoints11 = array( 
-			array("label"=>"allemagne", "y"=> $allemagne),
-			array("label"=>"chine", "y"=> $chine),
-			array("label"=>"espagne", "y"=> $espagne),
-			array("label"=>"etats_unis", "y"=> $etats_unis),
-			array("label"=>"france", "y"=> $france),
-			array("label"=>"italie", "y"=> $italie),
-			array("label"=>"royaume_uni", "y"=> $royaume_uni),
-			array("label"=>"russie", "y"=> $russie),
-			array("label"=>"thailande", "y"=> $thailande),
-			array("label"=>"turquie", "y"=> $turquie),
+			array("label"=>"Allemagne", "y"=> $allemagne),
+			array("label"=>"Chine", "y"=> $chine),
+			array("label"=>"Espagne", "y"=> $espagne),
+			array("label"=>"Etats-unis", "y"=> $etats_unis),
+			array("label"=>"France", "y"=> $france),
+			array("label"=>"Italie", "y"=> $italie),
+			array("label"=>"Royaume-uni", "y"=> $royaume_uni),
+			array("label"=>"Russie", "y"=> $russie),
+			array("label"=>"Thaïlande", "y"=> $thailande),
+			array("label"=>"Turquie", "y"=> $turquie),
 			array("label"=>"Pas de réponse", "y"=> $nul11),
 			array("label"=>"Autre", "y"=> $autre11),
 			);   
