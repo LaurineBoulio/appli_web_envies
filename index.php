@@ -8,40 +8,28 @@
 	if(isset($_POST['stats']) AND ($_POST['stats'] == 'Statistiques')){ 
 		header("Location:statistiques.php"); 
 	}
-	
-	
-	?>	
+?>	
 		
 	
-	
-
-
 <!DOCTYPE html>
 <html lang=fr dir="ltr">
 	<head>
 		<meta charset="utf-8">
-
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" href="assets/css/style.css">
 		<title>Vos envies</title>
-		<link rel="icon" type="image/png" href="assets/img/logo.png" />
-		
+		<link rel="icon" type="image/png" href="assets/img/logo.png" />	
 	</head>
 	<body>
-<div class="header" style=" height:60px;  background-color: #cc0052; color:#ffffff; font-size:30px;">
-	<form method='post' action='#'>	
-	
-
-	<p style="float:left; padding-top:5px;"><img src="assets/img/logo.png" style="width:100px; height:100px; margin-left:10px"/></p>
-<p>Vos envies
-<input type="submit" value="Questionnaire	|" name="qcm" style="margin-left:100px; text-align: center;background:none;color:#ffffff;border:none;font-size:20px;padding-top:25px; ">	
-
-	<input type="submit" value="Statistiques" id="stats" name="stats" class="submit" style="background:none;color:#ffffff;border:none;font-size:20px;padding-top:25px;  ">
-	
-	</p>
-</div>
-	</div>
-	
+		<div class="header" style=" height:60px;  background-color: #cc0052; color:#ffffff; font-size:30px;">
+			<form method='post' action='#'>	
+				<p style="float:left; padding-top:5px;"><img src="assets/img/logo.png" style="width:100px; height:100px; margin-left:10px"/></p>
+				<p>Vos envies
+					<input type="submit" value="Questionnaire	|" name="qcm" style="margin-left:100px; text-align: center;background:none;color:#ffffff;border:none;font-size:20px;padding-top:25px;">	
+					<input type="submit" value="Statistiques" id="stats" name="stats" class="submit" style="background:none;color:#ffffff;border:none;font-size:20px;padding-top:25px;">
+				</p>		
+			</form>
+		</div>
 	
 		<div class="corps" style="height: 4200px;">
 			<form method='post' action='#'>		
@@ -449,130 +437,128 @@
 						
 						
 						<h2>10. Quel sport vous plaît le plus ?</h2>
-					<div class="reponse">
-						<section>
-							<input type="radio" id="Formulaire10A"
-							 name="choix10" value="basket-ball" onclick="griser(this)">
-							<label for="formulaire10A">Basket-ball</label>
-							 </br>
-							<input type="radio" id="Formulaire10B"
-							 name="choix10" value="canoe-kayak" onclick="griser(this)">
-							<label for="formulaire10B">Canoe-Kayak</label>
-							 </br>
-							<input type="radio" id="Formulaire10C"
-							 name="choix10" value="equitation" onclick="griser(this)">
-							<label for="formulaire10C">Equitation</label>
-							 </br>			
-							<input type="radio" id="Formulaire10D"
-							 name="choix10" value="football" onclick="griser(this)">
-							<label for="formulaire10D">Football</label>
-							 </br>
-							<input type="radio" id="Formulaire10E"
-							 name="choix10" value="golf" onclick="griser()">
-							<label for="formulaire10E">Golf</label>
-							 </br>		
-							<input type="radio" id="Formulaire10F"
-							 name="choix10" value="handball" onclick="griser(this)">
-							<label for="formulaire10F">Handball</label>
-							 </br>			
-							<input type="radio" id="Formulaire10G"
-							 name="choix10" value="judo" onclick="griser(this)">
-							<label for="formulaire10G">Judo</label>
-							 </br>
-							<input type="radio" id="Formulaire10H"
-							 name="choix10" value="rugby" onclick="griser(this)">
-							<label for="formulaire10H">Rugby</label>
-							 </br>		
-							<input type="radio" id="Formulaire10I"
-							 name="choix10" value="sports sous-marins" onclick="griser(this)">
-							<label for="formulaire10I">Sports sous-marins</label>
-							 </br>	
-							<input type="radio" id="Formulaire10J"
-							 name="choix10" value="tennis" onclick="griser(this)">
-							<label for="formulaire10J">Tennis</label>
-							 </br>
-							<input type="radio" id="Formulaire10K"
-							name="choix10" value="autre10" onclick="nonGriser(this)">
-							<label for="formulaire10K">Autre</label>
-							<input type="text" id="commentaire10" name="commentaire10"  maxlength="30" size="30" disabled >	
-							 </br>	
-							<input type="radio" id="Formulaire10a"
-							 name="choix10" value="nul" checked onclick="griser(this)">
-							<label for="formulaire10a">Pas de réponse</label>
-							 </br>
-						</section>
-						
-					</div>
+						<div class="reponse">
+							<section>
+								<input type="radio" id="Formulaire10A"
+								 name="choix10" value="basket-ball" onclick="griser(this)">
+								<label for="formulaire10A">Basket-ball</label>
+								 </br>
+								<input type="radio" id="Formulaire10B"
+								 name="choix10" value="canoe-kayak" onclick="griser(this)">
+								<label for="formulaire10B">Canoe-Kayak</label>
+								 </br>
+								<input type="radio" id="Formulaire10C"
+								 name="choix10" value="equitation" onclick="griser(this)">
+								<label for="formulaire10C">Equitation</label>
+								 </br>			
+								<input type="radio" id="Formulaire10D"
+								 name="choix10" value="football" onclick="griser(this)">
+								<label for="formulaire10D">Football</label>
+								 </br>
+								<input type="radio" id="Formulaire10E"
+								 name="choix10" value="golf" onclick="griser()">
+								<label for="formulaire10E">Golf</label>
+								 </br>		
+								<input type="radio" id="Formulaire10F"
+								 name="choix10" value="handball" onclick="griser(this)">
+								<label for="formulaire10F">Handball</label>
+								 </br>			
+								<input type="radio" id="Formulaire10G"
+								 name="choix10" value="judo" onclick="griser(this)">
+								<label for="formulaire10G">Judo</label>
+								 </br>
+								<input type="radio" id="Formulaire10H"
+								 name="choix10" value="rugby" onclick="griser(this)">
+								<label for="formulaire10H">Rugby</label>
+								 </br>		
+								<input type="radio" id="Formulaire10I"
+								 name="choix10" value="sports sous-marins" onclick="griser(this)">
+								<label for="formulaire10I">Sports sous-marins</label>
+								 </br>	
+								<input type="radio" id="Formulaire10J"
+								 name="choix10" value="tennis" onclick="griser(this)">
+								<label for="formulaire10J">Tennis</label>
+								 </br>
+								<input type="radio" id="Formulaire10K"
+								name="choix10" value="autre10" onclick="nonGriser(this)">
+								<label for="formulaire10K">Autre</label>
+								<input type="text" id="commentaire10" name="commentaire10"  maxlength="30" size="30" disabled >	
+								 </br>	
+								<input type="radio" id="Formulaire10a"
+								 name="choix10" value="nul" checked onclick="griser(this)">
+								<label for="formulaire10a">Pas de réponse</label>
+								 </br>
+							</section>			
+						</div>
 					
-					<h2>11. Quelle est votre destination de rêve ?</h2>
-					<div class="reponse">
-						<section>
-							<input type="radio" id="Formulaire11A"
-							 name="choix11" value="allemagne" onclick="griser(this)">
-							<label for="formulaire11A">Allemagne</label>
-							 </br>
-							<input type="radio" id="Formulaire11B"
-							 name="choix11" value="chine" onclick="griser(this)">
-							<label for="formulaire11B">Chine</label>
-							 </br>
-							<input type="radio" id="Formulaire11C"
-							 name="choix11" value="espagne" onclick="griser(this)">
-							<label for="formulaire11C">Espagne</label>
-							 </br>			
-							<input type="radio" id="Formulaire11D"
-							 name="choix11" value="etats-Unis" onclick="griser(this)">
-							<label for="formulaire11D">Etats-Unis</label>
-							 </br>
-							<input type="radio" id="Formulaire11E"
-							 name="choix11" value="france" onclick="griser(this)">
-							<label for="formulaire11E">France</label>
-							 </br>		
-							<input type="radio" id="Formulaire11F"
-							 name="choix11" value="italie" onclick="griser(this)">
-							<label for="formulaire11F">Italie</label>
-							 </br>			
-							<input type="radio" id="Formulaire11G"
-							 name="choix11" value="royaume-uni" onclick="griser(this)">
-							<label for="formulaire11G">Royaume-Uni</label>
-							 </br>
-							<input type="radio" id="Formulaire11H"
-							 name="choix11" value="russie" onclick="griser(this)">
-							<label for="formulaire11H">Russie</label>
-							 </br>		
-							<input type="radio" id="Formulaire11I"
-							 name="choix11" value="thailande" onclick="griser(this)">
-							<label for="formulaire11I">Thailande</label>
-							 </br>	
-							<input type="radio" id="Formulaire11J"
-							 name="choix11" value="turquie" onclick="griser(this)">
-							<label for="formulaire11J">Turquie</label>
-							 </br>
-							<input type="radio" id="Formulaire11K"
-							 name="choix11" value="autre11" onclick="nonGriser(this)">
-							<label for="formulaire11K">Autre</label>
-							<input type="text" id="commentaire11" name="commentaire11"  maxlength="30" size="30" disabled>	
-							 </br>	
-							<input type="radio" id="Formulaire11a"
-							 name="choix11" value="nul" checked onclick="griser(this)">
-							<label for="formulaire11a">Pas de réponse</label>
-							 </br>							 
-						</section>
-						
-					</div>
-					
-					  </br>
-					  </br>
+						<h2>11. Quelle est votre destination de rêve ?</h2>
+						<div class="reponse">
+							<section>
+								<input type="radio" id="Formulaire11A"
+								 name="choix11" value="allemagne" onclick="griser(this)">
+								<label for="formulaire11A">Allemagne</label>
+								 </br>
+								<input type="radio" id="Formulaire11B"
+								 name="choix11" value="chine" onclick="griser(this)">
+								<label for="formulaire11B">Chine</label>
+								 </br>
+								<input type="radio" id="Formulaire11C"
+								 name="choix11" value="espagne" onclick="griser(this)">
+								<label for="formulaire11C">Espagne</label>
+								 </br>			
+								<input type="radio" id="Formulaire11D"
+								 name="choix11" value="etats-Unis" onclick="griser(this)">
+								<label for="formulaire11D">Etats-Unis</label>
+								 </br>
+								<input type="radio" id="Formulaire11E"
+								 name="choix11" value="france" onclick="griser(this)">
+								<label for="formulaire11E">France</label>
+								 </br>		
+								<input type="radio" id="Formulaire11F"
+								 name="choix11" value="italie" onclick="griser(this)">
+								<label for="formulaire11F">Italie</label>
+								 </br>			
+								<input type="radio" id="Formulaire11G"
+								 name="choix11" value="royaume-uni" onclick="griser(this)">
+								<label for="formulaire11G">Royaume-Uni</label>
+								 </br>
+								<input type="radio" id="Formulaire11H"
+								 name="choix11" value="russie" onclick="griser(this)">
+								<label for="formulaire11H">Russie</label>
+								 </br>		
+								<input type="radio" id="Formulaire11I"
+								 name="choix11" value="thailande" onclick="griser(this)">
+								<label for="formulaire11I">Thailande</label>
+								 </br>	
+								<input type="radio" id="Formulaire11J"
+								 name="choix11" value="turquie" onclick="griser(this)">
+								<label for="formulaire11J">Turquie</label>
+								 </br>
+								<input type="radio" id="Formulaire11K"
+								 name="choix11" value="autre11" onclick="nonGriser(this)">
+								<label for="formulaire11K">Autre</label>
+								<input type="text" id="commentaire11" name="commentaire11"  maxlength="30" size="30" disabled>	
+								 </br>	
+								<input type="radio" id="Formulaire11a"
+								 name="choix11" value="nul" checked onclick="griser(this)">
+								<label for="formulaire11a">Pas de réponse</label>
+								 </br>							 
+							</section>
+							
+						</div></br></br>
 					  
-					  <div style="margin-left: 870px;"><input type="submit" name="confirmer" id="confirmer" value="Confirmer" disabled > </div><br><br>
+				<div style="margin-left: 870px;"><input type="submit" name="confirmer" id="confirmer" value="Confirmer" disabled > </div><br><br>
 					   
 					  
 					
 					
-				</form>	
+			</form>	
 				
 		</div>	
 	</body>
+	
 	<script language="javascript" type="text/javascript">
+	
 		function nonGriser(champ) {
 			
 			var com1 = document.getElementById('commentaire1');
@@ -672,14 +658,9 @@
 		}
 		else{
 			bouton.disabled=true;
-		}  
-		
+		}  	
 	}
 		
-		
-	
-		
-	
 	</script>
 </html>
 
@@ -689,7 +670,6 @@
 				$sexe=$_POST['sexe'];
 				$age=$_POST['age'];	
 				$region=$_POST['region'];
-				
 				$reponse1=$_POST['choix1'];
 				$reponse2=$_POST['choix2'];
 				$reponse3=$_POST['choix3'];
@@ -733,7 +713,5 @@
 				$query->execute(array($sexe,$age,$region,$reponse1,$com1,$reponse2,$com2,$reponse3,$com3,$reponse4,$com4,$reponse5,$com5,$reponse6,$com6,$reponse7,$com7,$reponse8,$com8,$reponse9,$com9,$reponse10,$com10,$reponse11,$com11));
 								
 			}
-			
-			
-        ?>
+?>
 

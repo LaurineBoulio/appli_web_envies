@@ -1,9 +1,7 @@
 ﻿
 <?php
 	require_once("BDD.php");
-	
-
-	
+		
 	if(isset($_POST['stats']) AND ($_POST['stats'] == 'Statistiques')){ 
 		header("Location:statistiques.php"); 
 	}
@@ -12,84 +10,72 @@
 		header("Location:index.php"); 
 	}
 	
-	?>	
+?>	
 	
-
 
 <!DOCTYPE html>
 <html lang=fr dir="ltr">
 	<head>
 		<meta charset="utf-8">
-
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" href="assets/css/style.css">
 		<title>Vos envies</title>
 		<link rel="icon" type="image/png" href="assets/img/logo.png" />
 	</head>
 	<body>
-
-	<div class="header" style=" height:60px;  background-color: #cc0052; color:#ffffff; font-size:30px;">
-	<form method='post' action='#'>	
-	
-
-	<p style="float:left; padding-top:5px;"><img src="assets/img/logo.png" style="width:100px; height:100px; margin-left:10px"/></p>
-<p>Vos envies
-
-		
-	<input type="submit" value="Statistiques" id="stats" name="stats" class="submit" style="margin-right:630px;float:right;background:none;color:#ffffff;border:none;font-size:20px;padding-top:5px;padding-top:25px;  border-top-right-radius: 0.5rem; border-bottom-right-radius: 0.5rem;" disabled/>
-
-	<input type="submit" value="Questionnaire	|" name="qcm" style="margin-right:0px;float:right;background:none;color:#ffffff;border:none;font-size:20px;padding-top:25px;border-top-left-radius: 0.5rem; border-bottom-left-radius: 0.5rem;" /></p>
-</div>
-	</form>
-	
+		<div class="header" style=" height:60px;  background-color: #cc0052; color:#ffffff; font-size:30px;">
+			<form method='post' action='#'>	
+				<p style="float:left; padding-top:5px;"><img src="assets/img/logo.png" style="width:100px; height:100px; margin-left:10px"/></p>
+				<p>Vos envies
+					<input type="submit" value="Questionnaire	|" name="qcm" style="margin-left:100px; text-align: center;background:none;color:#ffffff;border:none;font-size:20px;padding-top:25px;">	
+					<input type="submit" value="Statistiques" id="stats" name="stats" class="submit" style="background:none;color:#ffffff;border:none;font-size:20px;padding-top:25px;">
+				</p>		
+			</form>
+		</div>
 	
 		<div class="corps" style="height: 5790px;">
 				<h1>Statistiques</h1>
 				<form method='post' action='#'>
 				<div class="reponse">
-				<label for="critere"><h2>Critères : </h2></label>
+					<label for="critere"><h2>Critères : </h2></label>
+					
+					<SELECT name="sexe" id="sexe" size="1" >
+							<OPTION value='Choisir sexe'>Sexe</OPTION>
+							<OPTION value='Femme'>Femme</OPTION>
+							<OPTION value='Homme'>Homme</OPTION>
+							<OPTION value='Autre'>Autre</OPTION>
+					</SELECT>
+					
+					<SELECT name="age" size="1" id="age" >
+							<OPTION value='Choisir age'>Age</OPTION>
+							<OPTION value='moins de 15 ans'>moins de 15 ans</OPTION>
+							<OPTION value='15/17 ans'>15/17 ans</OPTION>
+							<OPTION value='18/24 ans'>18/24 ans</OPTION>
+							<OPTION value='25/34 ans'>25/34 ans</OPTION>
+							<OPTION value='35/49 ans'>35/49 ans</OPTION>
+							<OPTION value='50/64 ans'>50/64 ans</OPTION>
+							<OPTION value='65 ans et plus'>65 ans et plus</OPTION>
+					</SELECT>
 				
-				<SELECT name="sexe" id="sexe" size="1" >
-						<OPTION value='Choisir sexe'>Sexe</OPTION>
-						<OPTION value='Femme'>Femme</OPTION>
-						<OPTION value='Homme'>Homme</OPTION>
-						<OPTION value='Autre'>Autre</OPTION>
-				</SELECT>
-				
-				
-				<SELECT name="age" size="1" id="age" >
-						<OPTION value='Choisir age'>Age</OPTION>
-						<OPTION value='moins de 15 ans'>moins de 15 ans</OPTION>
-						<OPTION value='15/17 ans'>15/17 ans</OPTION>
-						<OPTION value='18/24 ans'>18/24 ans</OPTION>
-						<OPTION value='25/34 ans'>25/34 ans</OPTION>
-						<OPTION value='35/49 ans'>35/49 ans</OPTION>
-						<OPTION value='50/64 ans'>50/64 ans</OPTION>
-						<OPTION value='65 ans et plus'>65 ans et plus</OPTION>
-				</SELECT>
-				
-				
-				
-				
-				<SELECT name="region" size="1" id="region" >
-					<OPTION value='Choisir region'>Région</OPTION>
-					<OPTION value='Auvergne-Rhône-Alpes'>Auvergne-Rhône-Alpes</OPTION>
-					<OPTION value='Bourgogne-Franche-Comte'>Bourgogne-Franche-Comté</OPTION>
-					<OPTION value='Bretagne'>Bretagne</OPTION>
-					<OPTION value='Centre-Val de Loire'>Centre-Val de Loire</OPTION>
-					<OPTION value='Corse'>Corse</OPTION>
-					<OPTION value='Grand Est'>Grand Est</OPTION>
-					<OPTION value='Hauts-de-France'>Hauts-de-France</OPTION>
-					<OPTION value='Ile-de-France'>Ile-de-France</OPTION>
-					<OPTION value='Normandie'>Normandie</OPTION>
-					<OPTION value='Nouvelle-Aquitaine'>Nouvelle-Aquitaine</OPTION>
-					<OPTION value='Occitanie'>Occitanie</OPTION>
-					<OPTION value='Pays de la Loire'>Pays de la Loire</OPTION>
-					<OPTION value='Provence-Alpes-Côte d Azur'>Provence-Alpes-Côte d'Azur</OPTION>
-				</SELECT>
-				
-				 <input type="submit" name="valider" id="valider" value="Valider"></br></br>
-				
+					<SELECT name="region" size="1" id="region" >
+						<OPTION value='Choisir region'>Région</OPTION>
+						<OPTION value='Auvergne-Rhône-Alpes'>Auvergne-Rhône-Alpes</OPTION>
+						<OPTION value='Bourgogne-Franche-Comte'>Bourgogne-Franche-Comté</OPTION>
+						<OPTION value='Bretagne'>Bretagne</OPTION>
+						<OPTION value='Centre-Val de Loire'>Centre-Val de Loire</OPTION>
+						<OPTION value='Corse'>Corse</OPTION>
+						<OPTION value='Grand Est'>Grand Est</OPTION>
+						<OPTION value='Hauts-de-France'>Hauts-de-France</OPTION>
+						<OPTION value='Ile-de-France'>Ile-de-France</OPTION>
+						<OPTION value='Normandie'>Normandie</OPTION>
+						<OPTION value='Nouvelle-Aquitaine'>Nouvelle-Aquitaine</OPTION>
+						<OPTION value='Occitanie'>Occitanie</OPTION>
+						<OPTION value='Pays de la Loire'>Pays de la Loire</OPTION>
+						<OPTION value='Provence-Alpes-Côte d Azur'>Provence-Alpes-Côte d'Azur</OPTION>
+					</SELECT>
+					
+					<input type="submit" name="valider" id="valider" value="Valider"></br></br>
+					
 				</div>
 				
 <?php
@@ -377,9 +363,7 @@
 
 				 $query->closeCursor();
 				 
-					 
-			
-				
+
 			//question 1
 			if($campagne !=0) $campagne=($campagne/$nbPersonne)*100;
 			if($plage !=0) $plage =($plage/$nbPersonne)*100;
@@ -626,206 +610,200 @@
 			array("label"=>"Pas de réponse", "y"=> $nul11),
 			array("label"=>"Autre", "y"=> $autre11),
 			);   
-			
-      
-			
-	?>
+?>
 	
-	
-	<script>
+<script>
+
 window.onload = function() {
  
  
-var chart = new CanvasJS.Chart("chartContainer", {
-	animationEnabled: true,
-	title: {
-		text: "Question 1"
-	},
-	subtitles: [{
-		text: "Envie de vacances"
-	}],
-	data: [{
-		type: "pie",
-		yValueFormatString: "#,##0.00\"%\"",
-		indexLabel: "{label} ({y})",
-		dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
-	}]
-});
-chart.render();
+	var chart = new CanvasJS.Chart("chartContainer", {
+		animationEnabled: true,
+		title: {
+			text: "Question 1"
+		},
+		subtitles: [{
+			text: "Envie de vacances"
+		}],
+		data: [{
+			type: "pie",
+			yValueFormatString: "#,##0.00\"%\"",
+			indexLabel: "{label} ({y})",
+			dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
+		}]
+	});
+	chart.render();
 
-var chart2 = new CanvasJS.Chart("chartContainer2", {
-	animationEnabled: true,
-	title: {
-		text: "Question 2"
-	},
-	subtitles: [{
-		text: "Sortie entre amis"
-	}],
-	data: [{
-		type: "pie",
-		yValueFormatString: "#,##0.00\"%\"",
-		indexLabel: "{label} ({y})",
-		dataPoints: <?php echo json_encode($dataPoints2, JSON_NUMERIC_CHECK); ?>
-	}]
-});
-chart2.render();
+	var chart2 = new CanvasJS.Chart("chartContainer2", {
+		animationEnabled: true,
+		title: {
+			text: "Question 2"
+		},
+		subtitles: [{
+			text: "Sortie entre amis"
+		}],
+		data: [{
+			type: "pie",
+			yValueFormatString: "#,##0.00\"%\"",
+			indexLabel: "{label} ({y})",
+			dataPoints: <?php echo json_encode($dataPoints2, JSON_NUMERIC_CHECK); ?>
+		}]
+	});
+	chart2.render();
 
- var chart3 = new CanvasJS.Chart("chartContainer3", {
-	animationEnabled: true,
-	title: {
-		text: "Question 3"
-	},
-	subtitles: [{
-		text: "Passe-temps du soir"
-	}],
-	data: [{
-		type: "pie",
-		yValueFormatString: "#,##0.00\"%\"",
-		indexLabel: "{label} ({y})",
-		dataPoints: <?php echo json_encode($dataPoints3, JSON_NUMERIC_CHECK); ?>
-	}]
-});
-chart3.render();
+	 var chart3 = new CanvasJS.Chart("chartContainer3", {
+		animationEnabled: true,
+		title: {
+			text: "Question 3"
+		},
+		subtitles: [{
+			text: "Passe-temps du soir"
+		}],
+		data: [{
+			type: "pie",
+			yValueFormatString: "#,##0.00\"%\"",
+			indexLabel: "{label} ({y})",
+			dataPoints: <?php echo json_encode($dataPoints3, JSON_NUMERIC_CHECK); ?>
+		}]
+	});
+	chart3.render();
 
- var chart4 = new CanvasJS.Chart("chartContainer4", {
-	animationEnabled: true,
-	title: {
-		text: "Question 4"
-	},
-	subtitles: [{
-		text: "Consommation dans un bar"
-	}],
-	data: [{
-		type: "pie",
-		yValueFormatString: "#,##0.00\"%\"",
-		indexLabel: "{label} ({y})",
-		dataPoints: <?php echo json_encode($dataPoints4, JSON_NUMERIC_CHECK); ?>
-	}]
-});
-chart4.render();
+	 var chart4 = new CanvasJS.Chart("chartContainer4", {
+		animationEnabled: true,
+		title: {
+			text: "Question 4"
+		},
+		subtitles: [{
+			text: "Consommation dans un bar"
+		}],
+		data: [{
+			type: "pie",
+			yValueFormatString: "#,##0.00\"%\"",
+			indexLabel: "{label} ({y})",
+			dataPoints: <?php echo json_encode($dataPoints4, JSON_NUMERIC_CHECK); ?>
+		}]
+	});
+	chart4.render();
 
- var chart5 = new CanvasJS.Chart("chartContainer5", {
-	animationEnabled: true,
-	title: {
-		text: "Question 5"
-	},
-	subtitles: [{
-		text: "Habitation de rêve"
-	}],
-	data: [{
-		type: "pie",
-		yValueFormatString: "#,##0.00\"%\"",
-		indexLabel: "{label} ({y})",
-		dataPoints: <?php echo json_encode($dataPoints5, JSON_NUMERIC_CHECK); ?>
-	}]
-});
-chart5.render();
+	 var chart5 = new CanvasJS.Chart("chartContainer5", {
+		animationEnabled: true,
+		title: {
+			text: "Question 5"
+		},
+		subtitles: [{
+			text: "Habitation de rêve"
+		}],
+		data: [{
+			type: "pie",
+			yValueFormatString: "#,##0.00\"%\"",
+			indexLabel: "{label} ({y})",
+			dataPoints: <?php echo json_encode($dataPoints5, JSON_NUMERIC_CHECK); ?>
+		}]
+	});
+	chart5.render();
 
- var chart6 = new CanvasJS.Chart("chartContainer6", {
-	animationEnabled: true,
-	title: {
-		text: "Question 6"
-	},
-	subtitles: [{
-		text: "Animal de compagnie"
-	}],
-	data: [{
-		type: "pie",
-		yValueFormatString: "#,##0.00\"%\"",
-		indexLabel: "{label} ({y})",
-		dataPoints: <?php echo json_encode($dataPoints6, JSON_NUMERIC_CHECK); ?>
-	}]
-});
-chart6.render();
+	 var chart6 = new CanvasJS.Chart("chartContainer6", {
+		animationEnabled: true,
+		title: {
+			text: "Question 6"
+		},
+		subtitles: [{
+			text: "Animal de compagnie"
+		}],
+		data: [{
+			type: "pie",
+			yValueFormatString: "#,##0.00\"%\"",
+			indexLabel: "{label} ({y})",
+			dataPoints: <?php echo json_encode($dataPoints6, JSON_NUMERIC_CHECK); ?>
+		}]
+	});
+	chart6.render();
 
- var chart7 = new CanvasJS.Chart("chartContainer7", {
-	animationEnabled: true,
-	title: {
-		text: "Question 7"
-	},
-	subtitles: [{
-		text: "Catégorie de film"
-	}],
-	data: [{
-		type: "pie",
-		yValueFormatString: "#,##0.00\"%\"",
-		indexLabel: "{label} ({y})",
-		dataPoints: <?php echo json_encode($dataPoints7, JSON_NUMERIC_CHECK); ?>
-	}]
-});
-chart7.render();
+	 var chart7 = new CanvasJS.Chart("chartContainer7", {
+		animationEnabled: true,
+		title: {
+			text: "Question 7"
+		},
+		subtitles: [{
+			text: "Catégorie de film"
+		}],
+		data: [{
+			type: "pie",
+			yValueFormatString: "#,##0.00\"%\"",
+			indexLabel: "{label} ({y})",
+			dataPoints: <?php echo json_encode($dataPoints7, JSON_NUMERIC_CHECK); ?>
+		}]
+	});
+	chart7.render();
 
- var chart8 = new CanvasJS.Chart("chartContainer8", {
-	animationEnabled: true,
-	title: {
-		text: "Question 8"
-	},
-	subtitles: [{
-		text: "Catégorie de musique"
-	}],
-	data: [{
-		type: "pie",
-		yValueFormatString: "#,##0.00\"%\"",
-		indexLabel: "{label} ({y})",
-		dataPoints: <?php echo json_encode($dataPoints8, JSON_NUMERIC_CHECK); ?>
-	}]
-});
-chart8.render();
+	 var chart8 = new CanvasJS.Chart("chartContainer8", {
+		animationEnabled: true,
+		title: {
+			text: "Question 8"
+		},
+		subtitles: [{
+			text: "Catégorie de musique"
+		}],
+		data: [{
+			type: "pie",
+			yValueFormatString: "#,##0.00\"%\"",
+			indexLabel: "{label} ({y})",
+			dataPoints: <?php echo json_encode($dataPoints8, JSON_NUMERIC_CHECK); ?>
+		}]
+	});
+	chart8.render();
 
- var chart9 = new CanvasJS.Chart("chartContainer9", {
-	animationEnabled: true,
-	title: {
-		text: "Question 9"
-	},
-	subtitles: [{
-		text: "plat"
-	}],
-	data: [{
-		type: "pie",
-		yValueFormatString: "#,##0.00\"%\"",
-		indexLabel: "{label} ({y})",
-		dataPoints: <?php echo json_encode($dataPoints9, JSON_NUMERIC_CHECK); ?>
-	}]
-});
-chart9.render();
+	 var chart9 = new CanvasJS.Chart("chartContainer9", {
+		animationEnabled: true,
+		title: {
+			text: "Question 9"
+		},
+		subtitles: [{
+			text: "plat"
+		}],
+		data: [{
+			type: "pie",
+			yValueFormatString: "#,##0.00\"%\"",
+			indexLabel: "{label} ({y})",
+			dataPoints: <?php echo json_encode($dataPoints9, JSON_NUMERIC_CHECK); ?>
+		}]
+	});
+	chart9.render();
 
- var chart10 = new CanvasJS.Chart("chartContainer10", {
-	animationEnabled: true,
-	title: {
-		text: "Question 10"
-	},
-	subtitles: [{
-		text: "sport"
-	}],
-	data: [{
-		type: "pie",
-		yValueFormatString: "#,##0.00\"%\"",
-		indexLabel: "{label} ({y})",
-		dataPoints: <?php echo json_encode($dataPoints10, JSON_NUMERIC_CHECK); ?>
-	}]
-});
-chart10.render();
+	 var chart10 = new CanvasJS.Chart("chartContainer10", {
+		animationEnabled: true,
+		title: {
+			text: "Question 10"
+		},
+		subtitles: [{
+			text: "sport"
+		}],
+		data: [{
+			type: "pie",
+			yValueFormatString: "#,##0.00\"%\"",
+			indexLabel: "{label} ({y})",
+			dataPoints: <?php echo json_encode($dataPoints10, JSON_NUMERIC_CHECK); ?>
+		}]
+	});
+	chart10.render();
 
- var chart11 = new CanvasJS.Chart("chartContainer11", {
-	animationEnabled: true,
-	title: {
-		text: "Question 11"
-	},
-	subtitles: [{
-		text: "voyage"
-	}],
-	data: [{
-		type: "pie",
-		yValueFormatString: "#,##0.00\"%\"",
-		indexLabel: "{label} ({y})",
-		dataPoints: <?php echo json_encode($dataPoints11, JSON_NUMERIC_CHECK); ?>
-	}]
-});
-chart11.render();
+	 var chart11 = new CanvasJS.Chart("chartContainer11", {
+		animationEnabled: true,
+		title: {
+			text: "Question 11"
+		},
+		subtitles: [{
+			text: "voyage"
+		}],
+		data: [{
+			type: "pie",
+			yValueFormatString: "#,##0.00\"%\"",
+			indexLabel: "{label} ({y})",
+			dataPoints: <?php echo json_encode($dataPoints11, JSON_NUMERIC_CHECK); ?>
+		}]
+	});
+	chart11.render();
 }
-
-	
-	
 
 </script>
 
@@ -861,10 +839,8 @@ chart11.render();
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
 </br></br></br>
-			
-		
+
 			</form>
 		</div>	
-	
-</body>	
+	</body>	
 </html>
